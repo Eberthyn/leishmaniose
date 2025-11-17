@@ -1,0 +1,61 @@
+.header {
+  background: url("../../images/logos/Banner\ módulos\ 1-4\ \(1640\ x\ 450\ px\).png");
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+.header__inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header__title h2 {
+  display: block;
+  color: white;
+  text-align: right;
+  padding: 0;
+  margin: 0;
+  font-size: 4rem;
+  line-height: var(--fio-sys-typography-head-xl-line-height);
+  text-shadow: var(--fio-sys-text-shadow-header);
+}
+
+.header__title h2 span {
+  display: block;
+  font-family: "Lato Light", sans-serif;
+  margin-bottom: 1rem;
+  color: var(--fio-sys-text-color-white);
+  font-size: 1.5rem;
+}
+
+/* Medium devices (tablets, up to 767px) */
+@media (max-width: 767px) {
+  .header__title h2 {
+    font-size: 7vw;
+    text-align: left;
+  }
+}
+@media (max-width: 568px) {
+  .header__title h2 {
+    font-size: 10vw;
+    line-height: calc(var(--fio-sys-typography-head-xl-line-height) * 0.8);
+    text-align: left;
+  }
+}
+/* Medium devices (tablets, up to 992px) */
+@media (max-width: 991.9px) {
+}
+
+/* Medium devices (tablets, up to 1199px) */
+@media (max-width: 1199px) {
+  .header__title h1 {
+    font-size: 2.15rem;
+  }
+}

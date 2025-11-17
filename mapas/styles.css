@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* CONTAINER PRINCIPAL */
+.container {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* SIDEBAR LATERAL */
+.sidebar {
+  width: 350px; /* Define a largura fixa da sidebar */
+  background-color: #c40f17;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  margin-top: 3.5rem; /* Margem inicial */
+  transition: margin-top 0.3s ease; /* Transição suave */
+}
+
+@media (max-width: 980px) {
+  .sidebar {
+    display: none;
+  }
+}
+#popup {
+  @media (max-width: 980px) {
+    margin-top: 60px;
+  }
+}
+.main-header {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* Ajuste conforme necessário */
+  background-color: #c40f17;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.main-header .logo {
+  height: 40px;
+  padding-top: 10px;
+  /* Ajuste conforme o tamanho desejado */
+}
+
+.main-header nav {
+  display: flex;
+  gap: 10px;
+}
+
+.main-header button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  background-color: transparent;
+}
+
+.main-header button:hover {
+  background-color: #e56a7b;
+}
+
+@media (max-width: 980px) {
+  .main-header {
+    display: flex;
+  }
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.button-side {
+  width: 100%;
+  padding: 1rem 0 1rem 0;
+  background-color: transparent;
+  color: white;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+.button-side:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: #e56a7b;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* ÁREA PRINCIPAL */
+.content {
+  float: right;
+  margin-top: 4rem;
+  width: 75%;
+  @media (max-width: 980px) {
+    width: 100%;
+  }
+}
+
+/* IMAGEM ACIMA DO MAPA */
+.top-image {
+  display: block;
+  margin: 0 auto;
+  @media (max-width: 980px) {
+    display: none;
+  }
+}
+
+/* MAPA MENTAL */
+.mindmap {
+  width: 100%; /* Ocupa toda a largura disponível */
+  height: 80vh; /* Altura de 80% da tela */
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  flex: 1;
+  width: 100%;
+  @media (max-width: 980px) {
+    height: 60vh;
+  }
+}
+
+#mindmap {
+  flex: 1;
+  width: 100%;
+}
+#mindmap svg {
+  transform: scale(1.5); /* Aumenta o tamanho */
+  transform-origin: center; /* Mantém o centro como referência */
+  width: 100%;
+  height: 100vh;
+}
+body {
+  overflow: hidden;
+}
+.sidebar-mobile {
+  display: none;
+  @media (max-width: 980px) {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

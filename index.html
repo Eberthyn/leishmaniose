@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Leishmanioses</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <script src="./assets/js/link.js"></script> -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/images/home/IconSite.png"
+      style="object-fit: contain"
+    />
+
+    <link href="./assets/css/utilities/normalize.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    />
+    <link href="./assets/css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/css copy/style.css" />
+    <link rel="stylesheet" href="./assets/css/css copy/home.css" />
+    <link rel="stylesheet" href="./assets/css/css copy/animate.min.css" />
+    <link rel="stylesheet" href="./assets/css/css/recursos-visuais/boxes.css" />
+
+    <style>
+      h5 {
+        color: var(--secondary-color);
+        margin-bottom: 2rem;
+        font-weight: 700;
+        font-size: 3px;
+      }
+      .heading__title {
+        font-size: 4rem;
+        @media (max-width: 840px) {
+          font-size: 3rem;
+        }
+        @media (max-width: 576px) {
+          font-size: 2rem;
+        }
+      }
+      dialog {
+        width: 50%;
+        height: 85%;
+        max-width: 80%;
+        max-height: 80%;
+        border: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 8px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        z-index: 1000;
+        outline: none;
+        overflow: auto;
+        /* Remove a borda azul do dialog */
+        @media (max-width: 1280px) {
+          width: 620px;
+        }
+        @media (max-width: 768px) {
+          width: 78%;
+        }
+      }
+
+      dialog::backdrop {
+        background-color: rgb(0 0 0 / 0.7);
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      button#openDialog {
+        background-color: #007bff;
+        color: #fff;
+      }
+      button.closeDialog {
+        font-size: 1rem;
+        border: none;
+        border-radius: 6px;
+        background-color: var(--primary-color);
+        color: white;
+        width: 100%;
+        height: 6vh;
+        outline: none;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-size: 100%;
+        text-align: center;
+      }
+      .closeDialog:hover {
+        background-color: var(--secondary-color-light);
+      }
+      h1 {
+        font-size: 34px;
+      }
+      .homeGifs {
+        display: flex;
+        flex-direction: column;
+      }
+
+      header {
+        padding-bottom: 0px !important;
+
+        & .row {
+          padding: 0px;
+        }
+      }
+
+      #menuLateral {
+        padding-left: 0px !important;
+      }
+
+      .menuHome {
+        position: absolute;
+        border: none;
+        color: white;
+        background-color: #35637f;
+        padding: 0px !important;
+        margin-left: 66%;
+        cursor: pointer;
+        align-items: center;
+        display: flex;
+        height: 42px;
+        z-index: 2;
+      }
+
+      .botaoMenuHome {
+        padding: 5px 15px 5px 15px;
+      }
+      .botaoMenuHome:hover {
+        text-decoration: underline !important;
+      }
+
+      .menuLateralHome {
+        padding-left: 8px;
+      }
+
+      @media (min-width: 1580px) {
+        .menuLateralHome {
+          display: none;
+        }
+      }
+
+      @media (max-width: 1580px) {
+        .menuHome {
+          display: none;
+        }
+      }
+
+      @media (max-width: 1500px) {
+        .menuHome {
+          margin-left: 60%;
+        }
+      }
+
+      @media (max-width: 1300px) {
+        .menuHome {
+          margin-left: 55%;
+        }
+      }
+
+      @media (max-width: 1200px) {
+        .menuHome {
+          margin-left: 45%;
+        }
+      }
+    </style>
+  </head>
+
+  <body style="background-color: #ffffff">
+    <!-- Toolbar -->
+    <header style="margin-top: -20px">
+      <img
+        src="assets/images/home/Capa Home (1920 x 696 px).png"
+        class="img-fluid"
+        alt="Capa do curso"
+      />
+    </header>
+
+    <div style="margin-top: 8%">
+      <!-- Apresentação -->
+      <div class="col-md-12" id="content">
+        <div class="main mb-5" style="background-color: #ffffff">
+          <section id="course-program">
+            <div class="row centro">
+              <div class="homeGifs">
+                <div class="row justify-content-center">
+                  <div class="col-12 col-md-10 col-lg-8 mb-2 text-center">
+                    <h2
+                      class="heading__title h3"
+                      style="
+                        color: var(--secondary-color-light);
+                        padding-bottom: 20px;
+                        border-bottom: 2.5px solid var(--primary-color-light);
+                      "
+                    >
+                      Estrutura do curso
+                    </h2>
+                  </div>
+                </div>
+                <div class="">
+                  <div class="col-11 col-md-10 col-lg-8">
+                    <div class="row justify-content-center">
+                      <div class="col-12 col-md-4 col-lg-4 mb-5 text-center">
+                        <img
+                          src="./assets/images/home/interface1.gif"
+                          class="icone mb-4"
+                          style="height: 120px"
+                          alt=""
+                        />
+                        <p><strong>Modalidade Autoinstrucional</strong></p>
+                      </div>
+                      <div class="col-12 col-md-4 col-lg-4 mb-3 text-center">
+                        <img
+                          src="./assets/images/home/relogio1.gif"
+                          class="icone mb-4"
+                          style="height: 120px"
+                          alt=""
+                        />
+                        <p><strong>30 horas de carga horária</strong></p>
+                      </div>
+                      <div class="col-12 col-md-4 col-lg-4 mb-3 text-center">
+                        <img
+                          src="./assets/images/home/cardapio1.gif"
+                          class="icone mb-4"
+                          style="height: 120px"
+                          alt=""
+                        />
+                        <p><strong>4 módulos</strong></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="video-index">
+              <iframe
+                src="https://educare.fiocruz.br/file-storage/r3aPMD88"
+                controls
+                allowfullscreen
+                class="iframe-index"
+              ></iframe>
+            </div>
+            <div class="margin-video-index"></div>
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <h5>MÓDULO 1</h5>
+                      <h4>O que são as leishmanioses?</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="obj-lista">
+                        <ul class="list-group">
+                          <li class="list-group-item" list-style="none">
+                            <span>Aula 1:</span> O que são as leishmanioses?
+                          </li>
+                          <li class="list-group-item" list-style="none">
+                            <span>Aula 2:</span> Leishmanioses: as espécies do
+                            protozoário, seus vetores e suas manifestações
+                            clínicas no homem
+                          </li>
+                          <li class="list-group-item" list-style="none">
+                            <span>Aula 3:</span> Distribuição geográfica das
+                            leishmanioses
+                          </li>
+                          <li class="list-group-item" list-style="none">
+                            <span>Aula 4:</span> Cadeia de transmissão das
+                            leishmanioses
+                          </li>
+                          <li class="list-group-item" list-style="none">
+                            <span>Aula 5:</span> Vetores das leishmanioses
+                          </li>
+                          <li class="list-group-item" list-style="none">
+                            <span>Aula 6:</span> Ciclo do flebotomíneo
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <a
+                        href="./modulo1/modulo1-aula1.html"
+                        rel="next"
+                        class="button-primary"
+                        >Acessar módulo</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <h5>MÓDULO 2</h5>
+                      <h4>Patogenia e manifestações clínicas</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="obj-lista">
+                        <ul class="list-group">
+                          <li class="list-group-item" list-style="none">
+                            <span>Aula 1:</span> Patogenia e manifestações
+                            clínicas
+                          </li>
+                          <li class="list-group-item" list-style="none">
+                            <span>Aula 2:</span> Diagnóstico laboratorial da
+                            leishmaniose tegumentar
+                          </li>
+                          <li class="list-group-item" list-style="none">
+                            <span>Aula 3:</span> Diagnóstico da leishmaniose
+                            visceral humana
+                          </li>
+                          <li class="list-group-item" list-style="none">
+                            <span>Aula 4:</span> Diagnóstico da leishmaniose
+                            visceral canina
+                          </li>
+                          <li class="list-group-item" list-style="none">
+                            <span>Aula 5:</span> Tratamento
+                          </li>
+                          <li class="list-group-item" list-style="none">
+                            <span>Aula 6:</span> Vigilância epidemiológica do
+                            cão
+                          </li>
+                          <li class="list-group-item" list-style="none">
+                            <span>Aula 7:</span> Importância do manejo ambiental
+                          </li>
+                          <li class="list-group-item" list-style="none">
+                            <span>Aula 8:</span> Controle do reservatório canino
+                            e eutanásia dos animais infectados
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <a
+                        href="./modulo2/modulo2-aula1.html"
+                        rel="next"
+                        class="button-primary"
+                        >Acessar módulo</a
+                      >
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header">
+                      <h5>MÓDULO 3</h5>
+                      <h4>
+                        Fatores físicos e sociais que contribuem para a mudança
+                        do cenário
+                      </h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="obj-lista">
+                        <ul class="list-group">
+                          <li class="list-group-item" list-style="none">
+                            <span>Aula 1:</span> Fatores físicos e sociais que
+                            contribuem para a mudança do cenário da dispersão,
+                            agravamento das leishmanioses e como consequência no
+                            processo de transmissão
+                          </li>
+                          <li class="list-group-item" list-style="none">
+                            <span>Aula 2:</span> Processo de urbanização
+                          </li>
+                          <li class="list-group-item" list-style="none">
+                            <span>Aula 3:</span> Ciclos de transmissão das
+                            leishmanioses
+                          </li>
+                          <li class="list-group-item" list-style="none">
+                            <span>Aula 4:</span> Medidas de controle e prevenção
+                            das leishmanioses
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <a
+                        href="./modulo3/modulo3-aula1.html"
+                        rel="next"
+                        class="button-primary"
+                        >Acessar módulo</a
+                      >
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header">
+                      <h5>MÓDULO 4</h5>
+                      <h4>Conceito de Saúde Única</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="obj-lista">
+                        <li class="list-group-item" list-style="none">
+                          <span>Aula 1:</span> Conceito de Saúde Única, Uma Só
+                          Saúde, ou “One Health”
+                        </li>
+                        <li class="list-group-item" list-style="none">
+                          <span>Aula 2:</span> Intersetorialidade nas ações de
+                          enfrentamento às leishmanioses
+                        </li>
+                        <li class="list-group-item" list-style="none">
+                          <span>Aula 3:</span> Participação cidadã nas ações de
+                          enfrentamento às leishmanioses
+                        </li>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <a
+                        href="./modulo4/modulo4-aula1.html"
+                        rel="next"
+                        class="button-primary"
+                        >Acessar módulo</a
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <hr />
+              </div>
+            </div>
+          </section>
+          <div
+            class="row justify-content-center pt-5 mb-5"
+            style="padding-bottom: 50px"
+          >
+            <div class="col-12 col-md-10 col-lg-8">
+              <div
+                class="card-box card border-0 shadow"
+                style="border-radius: 20px"
+              >
+                <div class="box-title">
+                  <span
+                    class="h5"
+                    style="
+                      border-bottom: 1px solid var(--primary-color-light);
+                      color: var(--secondary-color-light);
+                    "
+                  >
+                    <span
+                      class="box-title__icone material-symbols-rounded"
+                      aria-hidden="true"
+                      >priority_high</span
+                    >
+                    Atenção
+                  </span>
+                  <div class="boxes-content">
+                    <p>
+                      Recomendamos que o curso seja realizado linearmente, pois
+                      a sequência das aulas facilita o entendimento sobre o
+                      material apresentado.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" style="width: 100%; min-height: 60px">
+          <div class="col-md-4 centro" style="background-color: #ffdec0">
+            <a
+              class="botaoMenuHome"
+              role="button"
+              id="openCreditos"
+              style="cursor: pointer !important"
+            >
+              <b class="hoverDefining"><i class="fas fa-list"></i>CRÉDITOS</b>
+            </a>
+            <dialog id="dialogCreditos">
+              <div id="dialogCreditosContent">Carregando...</div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: flex-end;
+                  align-items: center;
+                  margin-top: 10px;
+                "
+              >
+                <button class="closeDialog">Fechar</button>
+              </div>
+            </dialog>
+          </div>
+
+          <div class="col-md-4 centro" style="background-color: #f77f00">
+            <a
+              class="botaoMenuHome"
+              href="material-complementar.html"
+              style="cursor: pointer !important"
+              ><b class="hoverDefining"
+                ><i class="fas fa-book"></i>APOSTILA</b
+              ></a
+            >
+          </div>
+          <div class="col-md-4 centro" style="background-color: #ffdec0">
+            <a
+              class="botaoMenuHome"
+              role="button"
+              id="openGlossario"
+              style="cursor: pointer !important"
+            >
+              <b class="hoverDefining"><i class="fas fa-list"></i>GLOSSÁRIO</b>
+            </a>
+            <dialog id="dialogGlossario">
+              <div id="dialogGlossarioContent">Carregando...</div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: flex-end;
+                  margin-top: 10px;
+                "
+              >
+                <button class="closeDialog">Fechar</button>
+              </div>
+            </dialog>
+          </div>
+        </div>
+
+        <!-- Rodapé -->
+        <footer id="rodape">
+          <div class="row-main">
+            <div class="col-md-12 centro">
+              <img
+                class="img-fluid centro"
+                src="assets/images/rodape/Untitled design.png"
+                alt="Rodapé"
+              />
+            </div>
+          </div>
+        </footer>
+      </div>
+
+      <!-- Arquivos JS -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+      <script src="./assets/js/main.js"></script>
+      <script src="./assets/js/modal.js"></script>
+      
+    </div>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+/* Utilities */
+@import "./utilities/normalize.css";
+@import "./utilities/default.css";
+@import "./utilities/fonts.css";
+
+/* Layout */
+@import "./layout/bar.css";
+@import "./layout/centralizer.css";
+@import "./layout/content.css";
+@import "./layout/footer.css";
+@import "./layout/home-page.css";
+@import "./layout/pull-sidebar.css";
+@import "./layout/rollbar.css";
+@import "./layout/side-menu.css";
+@import "./layout/smartphone.css";
+@import "./layout/sup-menu.css";
+@import "./layout/tab-content.css";
+@import "./layout/table.css";
+
+/* Components */
+@import "./components/accordions.css";
+@import "./components/activities.css";
+@import "./components/buttons.css";
+@import "./components/cards.css";
+@import "./components/carrousel.css";
+@import "./components/list-icons.css";
+@import "./components/mobileicon.css";
+@import "./components/stepper.css";
+@import "./components/tooltip.css";
+@import "./components/videos.css";
+@import "./components/balloons.css";
+/* @import "./components/maps.css"; */
+@import "./components/quiz.css";

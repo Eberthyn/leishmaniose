@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Leishmanioses</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../assets/images/home/IconSite.png"
+    />
+    <script src="../popup.js"></script>
+    <link href="../../assets/css/utilities/normalize.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    />
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+    <link href="../styles.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.5/dist/style.css"
+    />
+  </head>
+  <body>
+    <div
+      id="popup"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #c40f17;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        z-index: 1000;
+      "
+    >
+      <span
+        >💡 Clique nas bolinhas do mapa mental para interagir e dê zoom para
+        explorar mais informações!</span
+      >
+      <button
+        onclick="closePopup()"
+        style="
+          margin-left: 15px;
+          background-color: white;
+          color: black;
+          border: none;
+          padding: 8px 10px;
+          cursor: pointer;
+          border-radius: 5px;
+        "
+      >
+        Fechar
+      </button>
+    </div>
+    <div class="sidebar-mobile">
+      <button class="button-side" onclick="window.history.back()">
+        Voltar
+      </button>
+      <button
+        class="button-side"
+        onclick="window.location.href='../../index.html' "
+      >
+        Pagina Inicial
+      </button>
+    </div>
+    <main class="content">
+      <img
+        src="../../assets/images/home/LOGOMARCA.svg"
+        class="top-image"
+        style="height: 20vh"
+      />
+      <svg id="mindmap"></svg>
+    </main>
+    <div class="container" id="mobile-container">
+      <header class="main-header">
+        <img
+          src="../../assets/images/logos/LOGO 4 (300 x 130 px).png"
+          alt="Logo"
+          class="logo"
+        />
+        <nav>
+          <button onclick="window.history.back()">Voltar</button>
+          <button onclick="window.location.href='../../index.html'">
+            Página Inicial
+          </button>
+        </nav>
+      </header>
+      <aside class="sidebar">
+        <img
+          src="../../assets/images/logos/LOGO 4 (300 x 130 px).png"
+          alt="Logo"
+          class="logo"
+        />
+        <a class="button-side" onclick="window.history.back()"> Voltar </a>
+        <a
+          class="button-side"
+          onclick="window.location.href='../../index.html' "
+        >
+          Página Inicial
+        </a>
+      </aside>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.5/dist/browser/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.5/dist/index.js"></script>
+    <script>
+      (() => {
+        setTimeout(() => {
+          const { markmap: x, mm: K } = window,
+            P = new x.Toolbar();
+          P.attach(K);
+          const F = P.render();
+          F.setAttribute("style", "position:absolute;bottom:20px;right:20px"),
+            document.body.append(F);
+        });
+      })();
+    </script>
+    <script>
+      ((b, L, T, D) => {
+        const H = b();
+        window.mm = H.Markmap.create(
+          "svg#mindmap",
+          (L || H.deriveOptions)(D),
+          T
+        );
+      })(
+        () => window.markmap,
+        null,
+        {
+          content: "1. Conceito de Saúde Única, Uma Só Saúde, ou One Health",
+          children: [
+            {
+              content: "1. Definição",
+              children: [
+                {
+                  content:
+                    '\n<p data-lines="3,4"><strong>Saúde Única</strong></p>',
+                  children: [
+                    {
+                      content: "Abordagem ampla da saúde.",
+                      children: [],
+                      payload: { tag: "li", lines: "4,5" },
+                    },
+                    {
+                      content: "Reconhece a interligação entre:",
+                      children: [
+                        {
+                          content: "Saúde Humana",
+                          children: [],
+                          payload: { tag: "li", lines: "6,7" },
+                        },
+                        {
+                          content: "Saúde Animal",
+                          children: [],
+                          payload: { tag: "li", lines: "7,8" },
+                        },
+                        {
+                          content: "Saúde Ambiental",
+                          children: [],
+                          payload: { tag: "li", lines: "8,10" },
+                        },
+                      ],
+                      payload: { tag: "li", lines: "5,10" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "3,10" },
+                },
+                {
+                  content:
+                    '\n<p data-lines="10,11"><strong>Interdependência</strong></p>',
+                  children: [
+                    {
+                      content:
+                        "A saúde de humanos, animais (domésticos e selvagens), plantas e o meio ambiente estão intimamente conectadas.",
+                      children: [],
+                      payload: { tag: "li", lines: "11,12" },
+                    },
+                    {
+                      content: "Influências mútuas entre as diferentes áreas.",
+                      children: [],
+                      payload: { tag: "li", lines: "12,14" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "10,14" },
+                },
+              ],
+              payload: { tag: "h2", lines: "2,3" },
+            },
+            {
+              content: "2. Relações Ecológicas",
+              children: [
+                {
+                  content: "<strong>Interações Ecológicas</strong>",
+                  children: [
+                    {
+                      content:
+                        "Relacionamento entre humanos, animais e o ambiente.",
+                      children: [],
+                      payload: { tag: "li", lines: "16,17" },
+                    },
+                    {
+                      content:
+                        "Facilita a transmissão de doenças, chamadas zoonoses.",
+                      children: [],
+                      payload: { tag: "li", lines: "17,18" },
+                    },
+                    {
+                      content: "Leishmaniose é um exemplo de zoonose.",
+                      children: [],
+                      payload: { tag: "li", lines: "18,20" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "15,20" },
+                },
+              ],
+              payload: { tag: "h2", lines: "14,15" },
+            },
+            {
+              content: "3. Zoonoses e Saúde Única",
+              children: [
+                {
+                  content:
+                    '\n<p data-lines="21,22"><strong>Exemplos de Zoonoses</strong></p>',
+                  children: [
+                    {
+                      content: "Leishmanioses",
+                      children: [],
+                      payload: { tag: "li", lines: "22,23" },
+                    },
+                    {
+                      content: "Ebola",
+                      children: [],
+                      payload: { tag: "li", lines: "23,24" },
+                    },
+                    {
+                      content: "COVID-19",
+                      children: [],
+                      payload: { tag: "li", lines: "24,25" },
+                    },
+                    {
+                      content: "Influenza pandêmica",
+                      children: [],
+                      payload: { tag: "li", lines: "25,26" },
+                    },
+                    {
+                      content: "Febre amarela",
+                      children: [],
+                      payload: { tag: "li", lines: "26,27" },
+                    },
+                    {
+                      content: "Raiva",
+                      children: [],
+                      payload: { tag: "li", lines: "27,28" },
+                    },
+                    {
+                      content: "Brucelose",
+                      children: [],
+                      payload: { tag: "li", lines: "28,29" },
+                    },
+                    {
+                      content: "Gripe aviária",
+                      children: [],
+                      payload: { tag: "li", lines: "29,31" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "21,31" },
+                },
+                {
+                  content:
+                    '\n<p data-lines="31,32"><strong>Impacto das Zoonoses</strong></p>',
+                  children: [
+                    {
+                      content:
+                        "75% das doenças infecciosas emergentes em humanos têm origem animal.",
+                      children: [],
+                      payload: { tag: "li", lines: "32,33" },
+                    },
+                    {
+                      content: "Impactos continentais ou globais.",
+                      children: [],
+                      payload: { tag: "li", lines: "33,35" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "31,35" },
+                },
+              ],
+              payload: { tag: "h2", lines: "20,21" },
+            },
+            {
+              content: "4. Abordagem Multidisciplinar",
+              children: [
+                {
+                  content:
+                    '\n<p data-lines="36,37"><strong>Enfrentamento de Problemas Complexos</strong></p>',
+                  children: [
+                    {
+                      content: "Envolve múltiplas variáveis.",
+                      children: [],
+                      payload: { tag: "li", lines: "37,38" },
+                    },
+                    {
+                      content: "Deve ser abordado de forma multidisciplinar.",
+                      children: [],
+                      payload: { tag: "li", lines: "38,39" },
+                    },
+                    {
+                      content:
+                        "Integração de diferentes áreas de conhecimento para soluções eficazes.",
+                      children: [],
+                      payload: { tag: "li", lines: "39,41" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "36,41" },
+                },
+                {
+                  content:
+                    '\n<p data-lines="41,42"><strong>Gestão Integrada</strong></p>',
+                  children: [
+                    {
+                      content: "A gestão deve envolver diversos setores.",
+                      children: [],
+                      payload: { tag: "li", lines: "42,43" },
+                    },
+                    {
+                      content:
+                        "Busca-se uma abordagem abrangente para problemas complexos.",
+                      children: [],
+                      payload: { tag: "li", lines: "43,45" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "41,45" },
+                },
+              ],
+              payload: { tag: "h2", lines: "35,36" },
+            },
+            {
+              content: "5. Papel da Saúde Única",
+              children: [
+                {
+                  content: "<strong>Programas, Políticas e Legislação</strong>",
+                  children: [
+                    {
+                      content:
+                        "Desenvolver e implementar programas e políticas integrados.",
+                      children: [],
+                      payload: { tag: "li", lines: "47,48" },
+                    },
+                    {
+                      content:
+                        "Colaboração entre múltiplos setores para melhores resultados em saúde pública.",
+                      children: [],
+                      payload: { tag: "li", lines: "48,50" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "46,50" },
+                },
+              ],
+              payload: { tag: "h2", lines: "45,46" },
+            },
+          ],
+          payload: { tag: "h1", lines: "0,1" },
+        },
+        null
+      );
+    </script>
+  </body>
+</html>

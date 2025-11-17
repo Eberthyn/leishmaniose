@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Leishmanioses</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../assets/images/home/IconSite.png"
+    />
+    <script src="../popup.js"></script>
+    <link href="../../assets/css/utilities/normalize.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    />
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+    <link href="../styles.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.5/dist/style.css"
+    />
+  </head>
+  <body>
+    <div
+      id="popup"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #c40f17;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        z-index: 1000;
+      "
+    >
+      <span
+        >💡 Clique nas bolinhas do mapa mental para interagir e dê zoom para
+        explorar mais informações!</span
+      >
+      <button
+        onclick="closePopup()"
+        style="
+          margin-left: 15px;
+          background-color: white;
+          color: black;
+          border: none;
+          padding: 8px 10px;
+          cursor: pointer;
+          border-radius: 5px;
+        "
+      >
+        Fechar
+      </button>
+    </div>
+    <div class="sidebar-mobile">
+      <button class="button-side" onclick="window.history.back()">
+        Voltar
+      </button>
+      <button
+        class="button-side"
+        onclick="window.location.href='../../index.html' "
+      >
+        Pagina Inicial
+      </button>
+    </div>
+    <main class="content">
+      <img
+        src="../../assets/images/home/LOGOMARCA.svg"
+        class="top-image"
+        style="height: 20vh"
+      />
+      <svg id="mindmap"></svg>
+    </main>
+    <div class="container" id="mobile-container">
+      <header class="main-header">
+        <img
+          src="../../assets/images/logos/LOGO 4 (300 x 130 px).png"
+          alt="Logo"
+          class="logo"
+        />
+        <nav>
+          <button onclick="window.history.back()">Voltar</button>
+          <button onclick="window.location.href='../../index.html'">
+            Página Inicial
+          </button>
+        </nav>
+      </header>
+      <aside class="sidebar">
+        <img
+          src="../../assets/images/logos/LOGO 4 (300 x 130 px).png"
+          alt="Logo"
+          class="logo"
+        />
+        <a class="button-side" onclick="window.history.back()"> Voltar </a>
+        <a
+          class="button-side"
+          onclick="window.location.href='../../index.html' "
+        >
+          Página Inicial
+        </a>
+      </aside>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.5/dist/browser/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.5/dist/index.js"></script>
+    <script>
+      (() => {
+        setTimeout(() => {
+          const { markmap: x, mm: K } = window,
+            P = new x.Toolbar();
+          P.attach(K);
+          const F = P.render();
+          F.setAttribute("style", "position:absolute;bottom:20px;right:20px"),
+            document.body.append(F);
+        });
+      })();
+    </script>
+    <script>
+      ((b, L, T, D) => {
+        const H = b();
+        window.mm = H.Markmap.create(
+          "svg#mindmap",
+          (L || H.deriveOptions)(D),
+          T
+        );
+      })(
+        () => window.markmap,
+        null,
+        {
+          content:
+            "2. Intersetorialidade nas Ações de Enfrentamento às Leishmanioses",
+          children: [
+            {
+              content: "1. Definição de Ações Intersetoriais",
+              children: [
+                {
+                  content:
+                    "<strong>Colaboração compartilhada</strong> entre diversos setores.",
+                  children: [],
+                  payload: { tag: "li", lines: "3,4" },
+                },
+                {
+                  content:
+                    "<strong>Responsabilidade conjunta e gestão compartilhada</strong> para melhorar a qualidade de vida.",
+                  children: [],
+                  payload: { tag: "li", lines: "4,5" },
+                },
+                {
+                  content:
+                    "Na saúde, cria <strong>espaços compartilhados de decisões</strong> entre instituições e setores.",
+                  children: [],
+                  payload: { tag: "li", lines: "5,6" },
+                },
+                {
+                  content: "Impacto positivo na <strong>população</strong>.",
+                  children: [],
+                  payload: { tag: "li", lines: "6,8" },
+                },
+              ],
+              payload: { tag: "h2", lines: "2,3" },
+            },
+            {
+              content: "2. Intersetorialidade na Saúde",
+              children: [
+                {
+                  content:
+                    "<strong>Estratégia de Saúde em áreas endêmicas</strong>.",
+                  children: [],
+                  payload: { tag: "li", lines: "9,10" },
+                },
+                {
+                  content:
+                    "<strong>Melhoria da saúde</strong> não é tarefa isolada.",
+                  children: [],
+                  payload: { tag: "li", lines: "10,11" },
+                },
+                {
+                  content:
+                    "<strong>Integração de secretarias, espaços comunitários e setores públicos</strong>.",
+                  children: [],
+                  payload: { tag: "li", lines: "11,12" },
+                },
+                {
+                  content:
+                    "Consideração dos <strong>determinantes sociais</strong> do processo saúde-doença.",
+                  children: [],
+                  payload: { tag: "li", lines: "12,14" },
+                },
+              ],
+              payload: { tag: "h2", lines: "8,9" },
+            },
+            {
+              content:
+                "3. Intersetorialidade na Política Nacional de Atenção Básica",
+              children: [
+                {
+                  content:
+                    "<strong>Responsabilidade de todos os profissionais</strong> da Estratégia Saúde da Família.",
+                  children: [],
+                  payload: { tag: "li", lines: "15,16" },
+                },
+                {
+                  content:
+                    "<strong>Parcerias e recursos comunitários</strong> para potencializar iniciativas de saúde.",
+                  children: [],
+                  payload: { tag: "li", lines: "16,17" },
+                },
+                {
+                  content:
+                    "<strong>Integração de projetos sociais</strong> com a saúde pública.",
+                  children: [],
+                  payload: { tag: "li", lines: "17,19" },
+                },
+              ],
+              payload: { tag: "h2", lines: "14,15" },
+            },
+            {
+              content: "4. Reciprocidade entre os Atores",
+              children: [
+                {
+                  content:
+                    "<strong>Compartilhamento de significados, conhecimentos, compromissos, valores e responsabilidades</strong>.",
+                  children: [],
+                  payload: { tag: "li", lines: "20,21" },
+                },
+                {
+                  content:
+                    "Superação de <strong>práticas fragmentadas</strong> em saúde.",
+                  children: [],
+                  payload: { tag: "li", lines: "21,22" },
+                },
+                {
+                  content:
+                    "Construção de estratégias de saúde <strong>integradas</strong>.",
+                  children: [],
+                  payload: { tag: "li", lines: "22,24" },
+                },
+              ],
+              payload: { tag: "h2", lines: "19,20" },
+            },
+            {
+              content: "5. Gestão Integrada",
+              children: [
+                {
+                  content: "Ações isoladas e desconectadas não são eficazes.",
+                  children: [],
+                  payload: { tag: "li", lines: "25,26" },
+                },
+                {
+                  content:
+                    "<strong>Conhecimento da realidade local</strong> é essencial para o trabalho das equipes multiprofissionais.",
+                  children: [],
+                  payload: { tag: "li", lines: "26,27" },
+                },
+                {
+                  content:
+                    "<strong>Equipes multiprofissionais</strong> devem atuar com base nas <strong>necessidades específicas</strong> da população.",
+                  children: [],
+                  payload: { tag: "li", lines: "27,29" },
+                },
+              ],
+              payload: { tag: "h2", lines: "24,25" },
+            },
+            {
+              content: "6. Articulação entre os Setores",
+              children: [
+                {
+                  content:
+                    "Ação intersetorial envolve a articulação de diferentes <strong>setores</strong>: saúde, educação, ambiente, etc.",
+                  children: [],
+                  payload: { tag: "li", lines: "30,31" },
+                },
+                {
+                  content:
+                    "<strong>Construção coletiva</strong> de saberes, práticas e soluções.",
+                  children: [],
+                  payload: { tag: "li", lines: "31,32" },
+                },
+                {
+                  content:
+                    "<strong>Vínculos de corresponsabilidade e cogestão</strong>.",
+                  children: [],
+                  payload: { tag: "li", lines: "32,34" },
+                },
+              ],
+              payload: { tag: "h2", lines: "29,30" },
+            },
+            {
+              content: "7. Desafios da Intersetorialidade",
+              children: [
+                {
+                  content:
+                    "<strong>Políticas públicas isoladas e centralizadas</strong>.",
+                  children: [],
+                  payload: { tag: "li", lines: "35,36" },
+                },
+                {
+                  content:
+                    "Instituições e serviços muitas vezes operam de forma <strong>paralela</strong> e sem coordenação.",
+                  children: [],
+                  payload: { tag: "li", lines: "36,37" },
+                },
+                {
+                  content:
+                    "A gestão intersetorial requer <strong>modelos flexíveis e descentralizados</strong>.",
+                  children: [],
+                  payload: { tag: "li", lines: "37,38" },
+                },
+                {
+                  content:
+                    "<strong>Participação da sociedade civil</strong> é fundamental.",
+                  children: [],
+                  payload: { tag: "li", lines: "38,40" },
+                },
+              ],
+              payload: { tag: "h2", lines: "34,35" },
+            },
+            {
+              content: "8. Trabalhando em Rede",
+              children: [
+                {
+                  content:
+                    "<strong>Conectar instituições de ensino, serviços de saúde e organizações comunitárias</strong>.",
+                  children: [],
+                  payload: { tag: "li", lines: "41,42" },
+                },
+                {
+                  content:
+                    "Abordagem <strong>holística da saúde pública</strong>.",
+                  children: [],
+                  payload: { tag: "li", lines: "42,43" },
+                },
+                {
+                  content:
+                    "<strong>Integração das ações de diferentes setores</strong> para enfrentar problemas complexos.",
+                  children: [],
+                  payload: { tag: "li", lines: "43,45" },
+                },
+              ],
+              payload: { tag: "h2", lines: "40,41" },
+            },
+            {
+              content: "9. Implementando a Intersetorialidade",
+              children: [
+                {
+                  content:
+                    "<strong>Compartilhamento de conhecimento</strong> entre setores.",
+                  children: [],
+                  payload: { tag: "li", lines: "46,47" },
+                },
+                {
+                  content:
+                    "Colaboração para superar <strong>barreiras de comunicação</strong>.",
+                  children: [],
+                  payload: { tag: "li", lines: "47,48" },
+                },
+                {
+                  content:
+                    "Processos intersetoriais podem ser <strong>mais lentos</strong>, mas são <strong>mais robustos e eficazes</strong>.",
+                  children: [],
+                  payload: { tag: "li", lines: "48,50" },
+                },
+              ],
+              payload: { tag: "h2", lines: "45,46" },
+            },
+            {
+              content: "10. O Triângulo de Governo de Matus",
+              children: [
+                {
+                  content:
+                    "<strong>Projeto de Governo</strong>: Define objetivos e meios para alcançar os resultados desejados.",
+                  children: [],
+                  payload: { tag: "li", lines: "51,52" },
+                },
+                {
+                  content:
+                    "<strong>Governabilidade</strong>: Capacidade de controlar variáveis que influenciam as decisões.",
+                  children: [],
+                  payload: { tag: "li", lines: "52,53" },
+                },
+                {
+                  content:
+                    "<strong>Capacidade de Governo</strong>: Habilidades técnicas e organizacionais para executar as ações.",
+                  children: [],
+                  payload: { tag: "li", lines: "53,55" },
+                },
+              ],
+              payload: { tag: "h2", lines: "50,51" },
+            },
+            {
+              content: "11. Espaços de Interação e Ação",
+              children: [
+                {
+                  content:
+                    "Criação de <strong>espaços de compartilhamento de saberes</strong> e poderes.",
+                  children: [],
+                  payload: { tag: "li", lines: "56,57" },
+                },
+                {
+                  content:
+                    "<strong>Negociação e colaboração</strong> entre diferentes atores.",
+                  children: [],
+                  payload: { tag: "li", lines: "57,58" },
+                },
+                {
+                  content: "Processo <strong>contínuo e dinâmico</strong>.",
+                  children: [],
+                  payload: { tag: "li", lines: "58,60" },
+                },
+              ],
+              payload: { tag: "h2", lines: "55,56" },
+            },
+            {
+              content: "12. Desafios e Oportunidades da Intersetorialidade",
+              children: [
+                {
+                  content:
+                    "Desafios em <strong>coordenação e comunicação</strong>, mas oportunidades para <strong>soluções inovadoras</strong>.",
+                  children: [],
+                  payload: { tag: "li", lines: "61,62" },
+                },
+                {
+                  content:
+                    "Ação intersetorial é <strong>fundamental para enfrentar problemas complexos</strong>.",
+                  children: [],
+                  payload: { tag: "li", lines: "62,64" },
+                },
+              ],
+              payload: { tag: "h2", lines: "60,61" },
+            },
+            {
+              content: "13. Impacto na Qualidade de Vida",
+              children: [
+                {
+                  content:
+                    "<strong>Organização da sociedade e priorização das necessidades</strong> é essencial para a saúde.",
+                  children: [],
+                  payload: { tag: "li", lines: "65,66" },
+                },
+                {
+                  content:
+                    "Ações <strong>articuladas entre setores</strong> são essenciais para enfrentar os desafios.",
+                  children: [],
+                  payload: { tag: "li", lines: "66,68" },
+                },
+              ],
+              payload: { tag: "h2", lines: "64,65" },
+            },
+            {
+              content: "14. Estratégia Democratizadora",
+              children: [
+                {
+                  content:
+                    "<strong>Compartilhamento de conhecimentos</strong> e poderes para enfrentar problemas complexos.",
+                  children: [],
+                  payload: { tag: "li", lines: "69,70" },
+                },
+                {
+                  content:
+                    "Processo <strong>contínuo de construção e colaboração</strong>.",
+                  children: [],
+                  payload: { tag: "li", lines: "70,72" },
+                },
+              ],
+              payload: { tag: "h2", lines: "68,69" },
+            },
+            {
+              content: "15. Formação e Capacitação",
+              children: [
+                {
+                  content:
+                    "<strong>Treinamento contínuo e interdisciplinar</strong> de profissionais de saúde.",
+                  children: [],
+                  payload: { tag: "li", lines: "73,74" },
+                },
+                {
+                  content:
+                    "Formação de equipes interdisciplinares para o controle das leishmanioses.",
+                  children: [],
+                  payload: { tag: "li", lines: "74,75" },
+                },
+                {
+                  content:
+                    "Desenvolvimento de <strong>habilidades para trabalho em equipe</strong> e <strong>cuidado integral</strong>.",
+                  children: [],
+                  payload: { tag: "li", lines: "75,76" },
+                },
+              ],
+              payload: { tag: "h2", lines: "72,73" },
+            },
+          ],
+          payload: { tag: "h1", lines: "0,1" },
+        },
+        null
+      );
+    </script>
+  </body>
+</html>

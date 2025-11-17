@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Leishmanioses</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../assets/images/home/IconSite.png"
+    />
+    <script src="../popup.js"></script>
+    <link href="../../assets/css/utilities/normalize.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    />
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+    <link href="../styles.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.5/dist/style.css"
+    />
+  </head>
+  <body>
+    <div
+      id="popup"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #c40f17;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        z-index: 1000;
+      "
+    >
+      <span
+        >💡 Clique nas bolinhas do mapa mental para interagir e dê zoom para
+        explorar mais informações!</span
+      >
+      <button
+        onclick="closePopup()"
+        style="
+          margin-left: 15px;
+          background-color: white;
+          color: black;
+          border: none;
+          padding: 8px 10px;
+          cursor: pointer;
+          border-radius: 5px;
+        "
+      >
+        Fechar
+      </button>
+    </div>
+    <div class="sidebar-mobile">
+      <button class="button-side" onclick="window.history.back()">
+        Voltar
+      </button>
+      <button
+        class="button-side"
+        onclick="window.location.href='../../index.html' "
+      >
+        Pagina Inicial
+      </button>
+    </div>
+    <main class="content">
+      <img
+        src="../../assets/images/home/LOGOMARCA.svg"
+        class="top-image"
+        style="height: 20vh"
+      />
+      <svg id="mindmap"></svg>
+    </main>
+    <div class="container" id="mobile-container">
+      <header class="main-header">
+        <img
+          src="../../assets/images/logos/LOGO 4 (300 x 130 px).png"
+          alt="Logo"
+          class="logo"
+        />
+        <nav>
+          <button onclick="window.history.back()">Voltar</button>
+          <button onclick="window.location.href='../../index.html'">
+            Página Inicial
+          </button>
+        </nav>
+      </header>
+      <aside class="sidebar">
+        <img
+          src="../../assets/images/logos/LOGO 4 (300 x 130 px).png"
+          alt="Logo"
+          class="logo"
+        />
+        <a class="button-side" onclick="window.history.back()"> Voltar </a>
+        <a
+          class="button-side"
+          onclick="window.location.href='../../index.html' "
+        >
+          Página Inicial
+        </a>
+      </aside>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.5/dist/browser/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.5/dist/index.js"></script>
+    <script>
+      (() => {
+        setTimeout(() => {
+          const { markmap: x, mm: K } = window,
+            P = new x.Toolbar();
+          P.attach(K);
+          const F = P.render();
+          F.setAttribute("style", "position:absolute;bottom:20px;right:20px"),
+            document.body.append(F);
+        });
+      })();
+    </script>
+    <script>
+      ((b, L, T, D) => {
+        const H = b();
+        window.mm = H.Markmap.create(
+          "svg#mindmap",
+          (L || H.deriveOptions)(D),
+          T
+        );
+      })(
+        () => window.markmap,
+        null,
+        {
+          content: "1. Patogenia e Manifestações Clínicas",
+          children: [
+            {
+              content: "2. Leishmaniose Tegumentar (LT)",
+              children: [
+                {
+                  content: "A. <strong>Leishmaniose Cutânea</strong>",
+                  children: [
+                    {
+                      content:
+                        "<strong>Lesões</strong>: Feridas arredondadas, bordas elevadas, geralmente não dolorosas.",
+                      children: [],
+                      payload: { tag: "li", lines: "17,18" },
+                    },
+                    {
+                      content:
+                        '<strong>Outros nomes</strong>: "Úlcera de Bauru", "Botão do Oriente", "Ferida Brava".',
+                      children: [],
+                      payload: { tag: "li", lines: "18,19" },
+                    },
+                    {
+                      content:
+                        "<strong>Cicatrização</strong>: Fechamento das feridas com formação de cicatriz.",
+                      children: [],
+                      payload: { tag: "li", lines: "19,21" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "16,17" },
+                },
+                {
+                  content: "B. <strong>Leishmaniose Mucosa</strong>",
+                  children: [
+                    {
+                      content:
+                        "<strong>Frequência</strong>: 3-6% dos casos de LT.",
+                      children: [],
+                      payload: { tag: "li", lines: "22,23" },
+                    },
+                    {
+                      content:
+                        "<strong>Lesões</strong>: Nas mucosas do nariz, boca e garganta.",
+                      children: [],
+                      payload: { tag: "li", lines: "23,24" },
+                    },
+                    {
+                      content:
+                        "<strong>Sintomas</strong>: Tosse, rouquidão, nariz entupido, sangramento.",
+                      children: [],
+                      payload: { tag: "li", lines: "24,25" },
+                    },
+                    {
+                      content:
+                        "<strong>Gravidade</strong>: Mais difícil de tratar, mas com cura possível.",
+                      children: [],
+                      payload: { tag: "li", lines: "25,27" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "21,22" },
+                },
+                {
+                  content: "C. <strong>Resposta Imunológica</strong>",
+                  children: [
+                    {
+                      content:
+                        "<strong>Glóbulos brancos</strong>: Leucócitos (linfócitos, monócitos, macrófagos) migram para o local da picada.",
+                      children: [],
+                      payload: { tag: "li", lines: "28,29" },
+                    },
+                    {
+                      content:
+                        "<strong>Formação de lesões</strong>: Pápula → Nódulo → Ferida.",
+                      children: [],
+                      payload: { tag: "li", lines: "29,30" },
+                    },
+                    {
+                      content: "<strong>Reação inflamatória</strong>:",
+                      children: [
+                        {
+                          content:
+                            "<strong>Polo hiperérgico</strong>: Reação exagerada, cura espontânea ou lesões mucosas.",
+                          children: [],
+                          payload: { tag: "li", lines: "31,32" },
+                        },
+                        {
+                          content:
+                            "<strong>Polo anérgico</strong>: Reação controlada, dificuldade de resolução.",
+                          children: [],
+                          payload: { tag: "li", lines: "32,34" },
+                        },
+                      ],
+                      payload: { tag: "li", lines: "30,34" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "27,28" },
+                },
+                {
+                  content: "D. <strong>Coinfecção com HIV</strong>",
+                  children: [
+                    {
+                      content:
+                        "<strong>Formas graves e incomuns</strong>: Se houver infecção pelo HIV.",
+                      children: [],
+                      payload: { tag: "li", lines: "35,36" },
+                    },
+                    {
+                      content:
+                        "<strong>Condições indicativas de coinfecção</strong>:",
+                      children: [
+                        {
+                          content:
+                            "Lesões cutâneas sem histórico de exposição à leishmaniose.",
+                          children: [],
+                          payload: { tag: "li", lines: "37,38" },
+                        },
+                        {
+                          content: "Forma cutânea disseminada.",
+                          children: [],
+                          payload: { tag: "li", lines: "38,39" },
+                        },
+                        {
+                          content: "Leishmaniose mucosa fora das áreas comuns.",
+                          children: [],
+                          payload: { tag: "li", lines: "39,41" },
+                        },
+                      ],
+                      payload: { tag: "li", lines: "36,41" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "34,35" },
+                },
+              ],
+              payload: { tag: "h2", lines: "14,15" },
+            },
+            {
+              content: "3. Leishmaniose Visceral (LV)",
+              children: [
+                {
+                  content: "A. <strong>Leishmaniose Visceral Humana</strong>",
+                  children: [
+                    {
+                      content:
+                        "<strong>Doença longa</strong>: Afeta vários órgãos, pode ser fatal sem tratamento.",
+                      children: [],
+                      payload: { tag: "li", lines: "44,45" },
+                    },
+                    {
+                      content:
+                        "<strong>Período de Incubação</strong>: 10 dias a 24 meses.",
+                      children: [],
+                      payload: { tag: "li", lines: "45,46" },
+                    },
+                    {
+                      content:
+                        "<strong>Grupos vulneráveis</strong>: Crianças e idosos.",
+                      children: [],
+                      payload: { tag: "li", lines: "46,48" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "43,44" },
+                },
+                {
+                  content: "B. <strong>Classificação Clínica</strong>",
+                  children: [
+                    {
+                      content:
+                        "<strong>Infecção Assintomática</strong>: Exames positivos, mas sem sintomas.",
+                      children: [],
+                      payload: { tag: "li", lines: "49,50" },
+                    },
+                    {
+                      content:
+                        "<strong>Infecção Ativa/Clássica</strong>: Febre, perda de peso, aumento do baço e fígado, tosse, diarreia.",
+                      children: [],
+                      payload: { tag: "li", lines: "50,51" },
+                    },
+                    {
+                      content:
+                        "<strong>Infecção Grave</strong>: Pneumonia bacteriana, emagrecimento, anemia severa, risco de morte.",
+                      children: [],
+                      payload: { tag: "li", lines: "51,53" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "48,49" },
+                },
+                {
+                  content: "C. <strong>Resposta Imunológica</strong>",
+                  children: [
+                    {
+                      content:
+                        "<strong>Linfócitos auxiliares tipo 1</strong>: Ativam macrófagos para destruir parasitos.",
+                      children: [],
+                      payload: { tag: "li", lines: "54,55" },
+                    },
+                    {
+                      content:
+                        "<strong>Linfócitos auxiliares tipo 2</strong>: Produzem anticorpos não protetores.",
+                      children: [],
+                      payload: { tag: "li", lines: "55,57" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "53,54" },
+                },
+                {
+                  content: "D. <strong>Coinfecção HIV e LV</strong>",
+                  children: [
+                    {
+                      content:
+                        "<strong>Alta gravidade</strong>: Dano à resposta imune, aumento da multiplicação do HIV.",
+                      children: [],
+                      payload: { tag: "li", lines: "58,59" },
+                    },
+                    {
+                      content:
+                        "<strong>Risco de morte</strong>: Necessidade de intervenção rápida e tratamento intensivo.",
+                      children: [],
+                      payload: { tag: "li", lines: "59,61" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "57,58" },
+                },
+              ],
+              payload: { tag: "h2", lines: "41,42" },
+            },
+            {
+              content: "4. Leishmaniose Visceral Canina (LVC)",
+              children: [
+                {
+                  content: "A. <strong>Manifestações Clínicas</strong>",
+                  children: [
+                    {
+                      content:
+                        "<strong>Evolução lenta ou rápida</strong>: Comprometimento de vários órgãos.",
+                      children: [],
+                      payload: { tag: "li", lines: "64,65" },
+                    },
+                    {
+                      content: "<strong>Sinais clínicos</strong>:",
+                      children: [
+                        {
+                          content:
+                            "Pelos sem brilho, feridas na pele, crescimento das unhas, aumento de baço e gânglios linfáticos.",
+                          children: [],
+                          payload: { tag: "li", lines: "66,67" },
+                        },
+                        {
+                          content:
+                            "Fase final: Perda de movimentos das patas traseiras, emagrecimento, falta de apetite e morte.",
+                          children: [],
+                          payload: { tag: "li", lines: "67,69" },
+                        },
+                      ],
+                      payload: { tag: "li", lines: "65,69" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "63,64" },
+                },
+                {
+                  content: "B. <strong>Classificação Clínica</strong>",
+                  children: [
+                    {
+                      content:
+                        "<strong>Cães Assintomáticos</strong>: Exames positivos, sem sinais clínicos.",
+                      children: [],
+                      payload: { tag: "li", lines: "70,71" },
+                    },
+                    {
+                      content:
+                        "<strong>Cães Oligossintomáticos</strong>: Sintomas iniciais, como aumento de gânglios linfáticos e perda de peso.",
+                      children: [],
+                      payload: { tag: "li", lines: "71,72" },
+                    },
+                    {
+                      content:
+                        "<strong>Cães Sintomáticos</strong>: Manifestação completa da doença (feridas, emagrecimento, perda de pelos).",
+                      children: [],
+                      payload: { tag: "li", lines: "72,74" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "69,70" },
+                },
+                {
+                  content: "C. <strong>Diagnóstico e Fatores de Risco</strong>",
+                  children: [
+                    {
+                      content:
+                        "<strong>Diagnóstico clínico difícil</strong>: Semelhança com outras doenças, como sarna.",
+                      children: [],
+                      payload: { tag: "li", lines: "75,76" },
+                    },
+                    {
+                      content:
+                        "<strong>Predisposição</strong>: Não há predisposição clara por raça ou idade, mas genética e idade podem influenciar.",
+                      children: [],
+                      payload: { tag: "li", lines: "76,78" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "74,75" },
+                },
+                {
+                  content: "D. <strong>Resposta Imunológica</strong>",
+                  children: [
+                    {
+                      content:
+                        "<strong>Linfócitos, monócitos, macrófagos</strong>: Responsáveis pela defesa contra a infecção.",
+                      children: [],
+                      payload: { tag: "li", lines: "79,80" },
+                    },
+                    {
+                      content:
+                        "<strong>Produção de anticorpos</strong>: Não é protetora contra a doença.",
+                      children: [],
+                      payload: { tag: "li", lines: "80,81" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "78,79" },
+                },
+              ],
+              payload: { tag: "h2", lines: "61,62" },
+            },
+          ],
+          payload: { tag: "h1", lines: "0,1" },
+        },
+        null
+      );
+    </script>
+  </body>
+</html>

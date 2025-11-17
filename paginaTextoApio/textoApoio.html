@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Leishmanioses</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Coloque o CSS antes de qualquer JavaScript -->
+    <link href="../assets/css/styles.css" rel="stylesheet" />
+    <link href="../mapas/styles.css" />
+    <link href="../assets/css/utilities/normalize.css" rel="stylesheet" />
+
+    <script type="module" src="./botaoPDF.js"></script>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../assets/images/home/IconSite.png"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    />
+    <link rel="stylesheet" src="../mapas/styles.css" />
+
+    <style>
+      /* Resetando margens e padding */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Estilos gerais para o corpo */
+      body {
+        display: flex; /* Por padrão, o menu ficará abaixo do PDF */
+        height: 100vh;
+        background-color: #ffffff;
+      }
+
+      .menu {
+        background-color: #c40f17;
+        color: white;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+      }
+
+      .menu ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .menu ul li {
+        padding: 10px 0;
+        width: 100%;
+      }
+      .menu ul li:hover {
+        color: #fff;
+        text-decoration: none;
+        background-color: #e56a7b;
+        border: none;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+      .menu ul li img {
+        pointer-events: none;
+        max-width: 100%;
+        height: auto;
+        padding-right: 20px;
+        margin-bottom: 20px;
+      }
+      .menu ul li a {
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        font-family: "Codec Pro", sans-serif;
+        display: block;
+        font-weight: bold;
+        padding: 6px 0 6px 0;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+      }
+      .menu ul li a :hover {
+        color: #fff; /* Pode manter o comportamento do texto */
+        background-color: transparent;
+      }
+
+      /* Estilos para o conteúdo (PDF) */
+      .content {
+        padding: 20px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #pdfIframe {
+        width: 80%; /* Ajusta o PDF para ocupar 80% da largura */
+        height: 80vh; /* Ajusta a altura do PDF para 80% da tela */
+      }
+
+      /* Estilos dos botões */
+
+      /* Ajustes para telas maiores */
+      @media (min-width: 980px) {
+        body {
+          flex-direction: row; /* Menu ao lado do PDF */
+        }
+
+        .menu {
+          width: 380px; /* Menu ocupa 15% da largura */
+          height: 100vh;
+          padding-top: 20px;
+        }
+
+        .content {
+          width: 85%; /* O conteúdo (PDF) ocupa o restante */
+        }
+
+        #pdfIframe {
+          width: 95%; /* Ajusta o PDF para ocupar 95% da largura disponível */
+          height: 100vh; /* A altura do PDF ocupa 100% da tela */
+        }
+      }
+
+      /* Ajustes para telas pequenas (abaixo de 980px) */
+      @media (max-width: 979px) {
+        #logo-mobile {
+          display: none;
+        }
+        body {
+          flex-direction: column; /* Menu abaixo do PDF */
+        }
+
+        .menu {
+          width: 100%;
+          background-color: white; /* O menu ocupa toda a largura da tela */
+        }
+
+        .content {
+          width: 100%; /* O conteúdo ocupa toda a largura da tela */
+        }
+
+        #pdfIframe {
+          width: 95%; /* Ajuste o PDF para ocupar 95% da largura disponível */
+          height: 80vh; /* Ajusta a altura para 80% da tela */
+        }
+      }
+    </style>
+  </head>
+  <body style="background-color: #ffffff">
+    <div class="menu" id="menu-mobile">
+      <ul>
+        <li style="pointer-events: none">
+          <img
+            src="../assets/images/logos/LOGO 4 (300 x 130 px).png"
+            alt="Logo"
+            class="logo"
+            id="logo-mobile"
+            style="max-width: 100%; height: auto; margin-bottom: 20px"
+          />
+        </li>
+        <li>
+          <a onclick="window.history.back()" class="button-side"> Voltar </a>
+        </li>
+        <li>
+          <a
+            class="button-side"
+            onclick="window.location.href='../index.html' "
+          >
+            Página Inicial
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <embed id="pdfIframe" type="application/pdf" />
+    </div>
+  </body>
+</html>

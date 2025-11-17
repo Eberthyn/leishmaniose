@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+      }
+      a {
+        text-decoration: none;
+      }
+      .main-container {
+        /* mesma largura da sidebar */
+        width: calc(100% - 350px); /* ocupa o resto da tela */
+        @media (max-width: 990px) {
+          width: 100%;
+        }
+      }
+      #botaoVoltar:hover,
+      #botaoAvancar:hover {
+        text-decoration: underline;
+      }
+      dialog {
+        width: 50%;
+        height: 85%;
+        max-width: 80%;
+        max-height: 80%;
+        border: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 8px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        z-index: 1000;
+        outline: none;
+        overflow: auto;
+        @media (max-width: 1280px) {
+          width: 620px;
+        }
+      }
+      dialog {
+        @media (max-width: 768px) {
+          width: 78%;
+        }
+      }
+      dialog::backdrop {
+        background-color: rgb(0 0 0 / 0.7);
+      }
+      button.closeDialog {
+        font-size: 1rem;
+        border: none;
+        border-radius: 6px;
+        background-color: var(--primary-color);
+        color: white;
+        width: 100%;
+        height: 6vh;
+        outline: none;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-size: 100%;
+        text-align: center;
+      }
+      .closeDialog:hover {
+        background-color: var(--secondary-color-light);
+      }
+      button.closeDialog {
+        font-size: 1rem;
+        border: none;
+        border-radius: 6px;
+        background-color: #ff7000;
+        color: white;
+        width: 100%;
+        height: 6vh;
+        outline: none;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-size: 100%;
+        text-align: center;
+      }
+      .closeDialog:hover {
+        background-color: #05314a;
+      }
+    </style>
+    <title>Leishmanioses</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="../assets/js/link.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../assets/images/home/IconSite.png"
+    />
+
+    <link href="../assets/css/normalize.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    />
+    <link href="../assets/css/styles.css" rel="stylesheet" />
+    <link href="../assets/css/utilities/fonts.css" rel="stylesheet" />
+    <link href="../assets/css/css/fonts.css" rel="stylesheet" />
+    <link href="../assets/css/css/header.css" rel="stylesheet" />
+    <link href="../assets/css/css/sidebar.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/css copy/animate.min.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/css/css/recursos-visuais/boxes.css"
+    />
+    <link rel="stylesheet" href="../assets/css/css copy/colors.css" />
+  </head>
+
+  <body>
+    <!-- Toolbar -->
+
+    <!-- Sidebar -->
+    <div class="main">
+      <div class="sidebar" role="navigation" id="sidebar">
+        <div class="sidebar__inner">
+          <section class="sidebar__header">
+            <section class="sidebar__section py-0">
+              <img
+                src="../assets/images/logos/LOGO 4 (300 x 130 px).png"
+                alt="Campus Virtual Fiocruz"
+                width="100%"
+              />
+            </section>
+            <h1>
+              leishmanioses:
+              <hr style="border: none" />
+              e eu com isso?
+            </h1>
+          </section>
+          <hr />
+          <section class="sidebar__section py-2">
+            <a
+              href="../index.html"
+              class="sidebar__btn"
+              tabindex="0"
+              role="link"
+            >
+              <span class="material-symbols-rounded" aria-hidden="true"
+                >home</span
+              >Página inicial
+            </a>
+          </section>
+          <nav class="sidebar__section sidebar__section--contrast pb-0">
+            <span class="h6 pre-title">Aulas do módulo 4:</span>
+            <div class="sidebar__topic-list pb-4">
+              <a
+                href="./modulo4-aula1.html"
+                tabindex="0"
+                role="link"
+                class="sidebar__btn sidebar__list-item"
+                ><span
+                  class="material-symbols-rounded"
+                  aria-label="Tópico não concluído"
+                  status="completed"
+                ></span>
+                Ações de controle da leishmaniose no Brasil segundo o Ministério
+                da Saúde
+              </a>
+
+              <a
+                href="modulo4-aula2.html"
+                tabindex="0"
+                role="link"
+                class="sidebar__btn sidebar__list-item"
+                ><span
+                  class="material-symbols-rounded"
+                  aria-label="Tópico não concluído"
+                  status="selected"
+                ></span
+                >Abordagens de diagnóstico e tratamento</a
+              >
+
+              <a
+                href="modulo4-aula3.html"
+                tabindex="0"
+                role="link"
+                class="sidebar__btn sidebar__list-item"
+                ><span
+                  class="material-symbols-rounded"
+                  aria-label="Tópico não concluído"
+                  status=""
+                ></span>
+                Saúde Única, Leishmanioses e a Interdisciplinaridade</a
+              >
+
+              <a
+                href="modulo4-quiz.html"
+                tabindex="0"
+                role="link"
+                class="sidebar__btn sidebar__list-item"
+                ><span
+                  class="material-symbols-rounded"
+                  aria-label="Tópico não concluído"
+                  status=""
+                >
+                </span>
+                Quiz</a
+              >
+            </div>
+          </nav>
+
+          <section class="sidebar__section classes">
+            <span class="h6 pre-title">Outros Módulos:</span>
+            <a
+              href="../modulo1/modulo1-aula1.html"
+              tabindex="0"
+              role="link"
+              class="sidebar__btn"
+            >
+              1. O que são as leishmanioses</a
+            >
+            <!-- <a href="../modulo2/introducao.html" tabindex="0" role="link" class="sidebar__btn"> 2. Manifestações clínicas, diagnóstico e tratamento</a> -->
+            <a
+              href="../modulo2/modulo2-aula1.html"
+              tabindex="0"
+              role="link"
+              class="sidebar__btn"
+            >
+              2. Patogênese e Manifestações Clínicas</a
+            >
+            <a
+              href="../modulo3/modulo3-aula1.html"
+              tabindex="0"
+              role="link"
+              class="sidebar__btn"
+            >
+              3. Fatores físicos e sociais que contribuem para a manutenção e
+              dispersão da doenças</a
+            >
+          </section>
+          <hr />
+
+          <section class="sidebar__section py-2">
+            <a class="sidebar__btn" role="link" id="openGlossario">
+              <span class="material-symbols-rounded">book</span> Glossario</a
+            >
+            <dialog id="dialogGlossario">
+              <div id="dialogGlossarioContent">Carregando...</div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: flex-end;
+                  align-items: center;
+                  margin-top: 10px;
+                "
+              >
+                <button class="closeDialog">Fechar</button>
+              </div>
+            </dialog>
+          </section>
+          <section class="sidebar__section py-2">
+            <a
+              href="../material-complementar.html"
+              class="sidebar__btn"
+              tabindex="0"
+              role="link"
+              data-bs-toggle="modal"
+              data-bs-target="#modal-material-complementar"
+            >
+              <span class="material-symbols-rounded">library_books</span>
+              Apostila</a
+            >
+          </section>
+          <section class="sidebar__section py-2">
+            <a class="sidebar__btn" role="link" id="openCreditos"
+              ><span class="material-symbols-rounded">
+                format_list_bulleted</span
+              >
+              Créditos</a
+            >
+            <dialog id="dialogCreditos">
+              <div id="dialogCreditosContent">Carregando...</div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: flex-end;
+                  align-items: center;
+                  margin-top: 10px;
+                "
+              >
+                <button class="closeDialog">Fechar</button>
+              </div>
+            </dialog>
+          </section>
+          <section class="sidebar__section py-2">
+            <a
+              class="sidebar__btn"
+              tabindex="0"
+              role="link"
+              data-bs-toggle="modal"
+              data-bs-target="#modal-material-complementar"
+              onclick="mostrarToast(event)"
+            >
+              <span class="material-symbols-rounded">exit_to_app</span>
+              Encerramento</a
+            >
+          </section>
+          <section class="sidebar__section py-2">
+            <a
+              class="sidebar__btn"
+              tabindex="0"
+              role="link"
+              data-bs-toggle="modal"
+              data-bs-target="#modal-material-complementar"
+              onclick="mostrarToast(event)"
+            >
+              <span class="material-symbols-rounded">quiz</span>
+              Quiz Final</a
+            >
+          </section>
+        </div>
+      </div>
+
+      <!-- Conteúdo principal -->
+      <div class="content" id="mainContent">
+        <header class="header py-5">
+          <div class="header__inner">
+            <div class="header__title">
+              <div class="container">
+                <div>
+                  <div
+                    class="col-12 col-md-10 col-lg-11 animate__animated animate__fadeIn"
+                    style="animation-delay: 0.5s"
+                  >
+                    <h2>
+                      <span class="h4">Módulo 4</span>
+                      Estratégias para o controle das leishmanioses:
+                      diagnóstico, tratamento e Saúde Única
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="conteudo">
+          <p class="indice">Aula 2</p>
+          <h1 style="padding-top: 15px; font-size: 3rem; color: #05314a">
+            Abordagens de diagnóstico e tratamento
+          </h1>
+
+          <hr
+            style="
+              display: block;
+              width: 40px;
+              height: 3px;
+              background: #ff7000;
+              border: none;
+              margin: 0;
+              border-radius: 10px;
+              margin-bottom: 30px;
+            "
+          />
+          <p>
+            As leishmanioses, especialmente nas formas que ocorrem nas áreas
+            urbanas, representam um relevante desafio para a saúde pública no
+            Brasil. Com sua capacidade de provocar surtos e alta letalidade na
+            forma visceral se não tratada, a doença exige estratégias de combate
+            bem articuladas e participativas.
+          </p>
+          <p>
+            Nos últimos anos, a distribuição dos casos de leishmaniose no Brasil
+            mudou. Até a década de 90, cerca de 90% dos casos notificados
+            ocorriam na região Nordeste Hoje, há um aumento significativo de
+            casos em outras regiões do país, como Norte, Sudeste e Centro-Oeste.
+          </p>
+          <div class="col-12 col-md-10 col-lg-8">
+            <div
+              class="card-box card border-0 shadow"
+              style="border-radius: 20px; margin-bottom: 30px"
+            >
+              <div class="box-title">
+                <span
+                  class="h5"
+                  style="
+                    border-bottom: 1px solid var(--primary-color-light);
+                    color: var(--secondary-color-light);
+                  "
+                >
+                  <span
+                    class="box-title__icone material-symbols-rounded"
+                    aria-hidden="true"
+                    >add</span
+                  >
+                  Pense sobre...
+                </span>
+                <div class="boxes-content">
+                  <p>Por que as leishmanioses se espalham</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            O Programa de Vigilância e Controle das Leishmanioses (PVCL) destaca
+            que a doença se espalha facilmente devido à complexa ecologia e
+            epidemiologia do seu vetor, que é capaz de se adaptar a diferentes
+            ambientes, incluindo áreas urbanas. A presença de cães infectados
+            nas cidades contribui para a continuidade do ciclo de transmissão.
+            Além disso, a ocupação urbana desordenada, a falta de saneamento
+            básico e condições insalubres agravam a situação.
+          </p>
+          <p class="tituloLista">Importância da responsabilidade e diálogo</p>
+          <p>
+            Em vez de culpar os indivíduos, é crucial promover um senso de
+            responsabilidade e estimular o diálogo entre a ciência e o
+            conhecimento popular (Figura 38). Cada comunidade tem seu conjunto
+            de saberes e percepções que pode contribuir para a criação de
+            estratégias eficazes de controle da leishmaniose, considerando seus
+            interesses, necessidades e visões de mundo.
+          </p>
+          <p class="tituloLista">Mobilização social e comunicação eficaz</p>
+          <p>
+            A mobilização social é essencial para mudar comportamentos e
+            prevenir a doença. Isso requer uma comunicação contínua e eficaz
+            entre a população e os profissionais de saúde. A compreensão e
+            percepção dos cidadãos sobre a prevenção e controle das
+            leishmanioses são tão importantes quanto o conhecimento clínico e
+            epidemiológico da doença.
+          </p>
+          <!--Imagem 1-->
+          <div class="row centro">
+            <div class="col-md-7 imagem">
+              <img
+                src="../assets/images/modulo4/aula3/mod4foto6.jpg"
+                class="img-fluid"
+              />
+              <div>
+                <small>
+                  <strong>Figura 38.</strong> Diálogo sobre as leishmanioses com
+                  as comunidades do sítio Xixá (área rural) e centro com
+                  escolares (área urbana), município de Timbaúba-PE.
+                  <strong>Fonte: </strong
+                  >Os autores.
+                </small>
+              </div>
+            </div>
+          </div>
+          <p>
+            No relatório da última reunião de peritos sobre LV realizada em
+            2010, já se destacou a importância da mobilização social no sentido
+            de mudar comportamentos da população destacando o diálogo permanente
+            entre população e profissionais de saúde, utilizando estratégias
+            eficazes de comunicação.
+          </p>
+          <p class="tituloLista">Reconhecendo os problemas locais</p>
+          <p>
+            Quando a população consegue reconhecer e entender seus problemas de
+            saúde, as ações de controle passam a "fazer sentido" e são mais
+            bem-sucedidas. É importante envolver os cidadãos em formatos
+            participativos e dialógicos, onde eles possam colaborar ativamente
+            com os profissionais de saúde e outros atores relevantes (Figura
+            39).
+          </p>
+          <!--Imagem 2-->
+          <div class="row centro">
+            <div class="col-md-7 imagem">
+              <img
+                src="../assets/images/modulo4/aula3/mod4foto7.jpg"
+                class="img-fluid"
+              />
+              <div>
+                <small>
+                  <strong>Figura 39.</strong> Comunidade participando da
+                  instalação e recolhimento de armadilhas para captura de
+                  insetos vetores dos parasitos causadores das leishmanioses;
+                  <strong><i>Fonte:</i></strong
+                  >Acervo Dr. Luiz Alves e Dr. Fábio Brayner
+                </small>
+              </div>
+            </div>
+          </div>
+          <p class="tituloLista">Construindo soluções locais</p>
+          <p>
+            Somente com a combinação de conhecimentos, habilidades e recursos de
+            diversas pessoas e organizações, as comunidades podem entender a
+            natureza dos problemas e desenvolver soluções eficazes que sejam
+            viáveis localmente.
+          </p>
+          <p class="tituloLista">Reconhecendo os problemas locais</p>
+          <p>
+            Termos como "engajamento comunitário", "parceria" e "colaboração"
+            podem ter significados diferentes para pessoas diferentes. Isso pode
+            criar expectativas variadas e, muitas vezes, mal-entendidas sobre o
+            envolvimento comunitário. Além disso, projetos de curto prazo ou com
+            recursos limitados podem frustrar os participantes e reduzir a
+            motivação.
+          </p>
+          <p>
+            Termos como "engajamento comunitário", "parceria" e "colaboração"
+            podem ter significados diferentes para pessoas diferentes. Isso pode
+            criar expectativas variadas e, muitas vezes, mal-entendidas sobre o
+            envolvimento comunitário. Além disso, projetos de curto prazo ou com
+            recursos limitados podem frustrar os participantes e reduzir a
+            motivação.
+          </p>
+          <hr
+            style="
+              display: block;
+              width: 40px;
+              height: 3px;
+              background: #ff7000;
+              border: none;
+              margin: 0;
+              border-radius: 10px;
+              margin-bottom: 30px;
+            "
+          />
+        </div>
+
+        <!-- Botões de navegação -->
+        <div class="row botao" style="display: flex" id="buttons-hover">
+          <a
+            href="../mapas/modulo4/a2.html"
+            class="btn btn-sm"
+            id="botaoVoltar"
+            role="button"
+            alt="Voltar"
+            style="border: none; color: white; background-color: #f77f00"
+          >
+            <strong>Mapa Mental</strong></a
+          >
+          <a
+            href="../paginaTextoApio/textoApoio.html?modulo=4&aula=2"
+            class="btn btn-sm"
+            id="botaoAvancar"
+            role="button"
+            alt="Avancar"
+            style="
+              margin-right: 30px;
+              background-color: white;
+              color: #f77f00;
+              border: 1px solid #f77f00;
+            "
+          >
+            <strong>Texto de Apoio</strong></a
+          >
+        </div>
+
+        <div
+          class="row botao"
+          style="
+            border-top: 2px solid transparent;
+            border-image: linear-gradient(
+              95deg,
+              rgba(255, 255, 255, 1) 0%,
+              rgba(247, 127, 0, 1) 50%,
+              rgba(255, 255, 255, 1) 100%
+            );
+            border-image-slice: 1;
+            border-radius: 15px;
+          "
+        >
+          <a
+            href="modulo4-aula1.html"
+            class="btn btn-sm"
+            id="botaoVoltar"
+            role="button"
+            alt="Voltar"
+          >
+            <strong
+              ><i class="fas fa-chevron-left"></i>Módulo 4 Aula 1</strong
+            ></a
+          >
+          <a
+            href="modulo4-aula3.html"
+            class="btn btn-sm"
+            id="botaoAvancar"
+            role="button"
+            style="margin-right: 30px"
+            alt="Avançar"
+          >
+            <strong>Módulo 4 Aula 3<i class="fas fa-chevron-right"></i></strong
+          ></a>
+        </div>
+
+        <!-- Rodapé -->
+        <footer>
+          <div class="row-main">
+            <div class="col-md-12 centro">
+              <img
+                class="img-fluid centro"
+                src="../assets/images/rodape/RÉGUA LOGO.png"
+                alt="Rodapé"
+              />
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Arquivos JS -->
+    <div id="sidebar-toggle">
+      <div class="box">
+        <div class="btn not-active">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="../assets/js/video.js"></script>
+    <script type="text/javascript" src="../assets/js/toast.js"></script>
+    <script type="text/javascript" src="../assets/js/sidebar.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <script>
+      // Aguarda o carregamento completo do DOM antes de executar qualquer código JavaScript
+      document.addEventListener("DOMContentLoaded", function () {
+        // Função genérica para abrir e carregar conteúdo em um diálogo
+        function configurarDialog(botaoId, dialogId, contentId, arquivoHtml) {
+          const botao = document.getElementById(botaoId);
+          const dialog = document.getElementById(dialogId);
+          const content = document.getElementById(contentId);
+
+          // Verifica se o botão e o diálogo existem
+          if (botao && dialog && content) {
+            botao.addEventListener("click", async () => {
+              dialog.showModal();
+              try {
+                const response = await fetch(arquivoHtml);
+                const texto = await response.text();
+                content.innerHTML = texto;
+              } catch (err) {
+                content.textContent = "Erro ao carregar o conteúdo.";
+              }
+            });
+
+            // Fechar clicando no botão 'Fechar'
+            dialog
+              .querySelector(".closeDialog")
+              .addEventListener("click", () => {
+                dialog.close();
+              });
+
+            // Fechar clicando fora da caixa (backdrop)
+            dialog.addEventListener("click", (event) => {
+              const rect = dialog.getBoundingClientRect();
+              if (
+                event.clientX < rect.left ||
+                event.clientX > rect.right ||
+                event.clientY < rect.top ||
+                event.clientY > rect.bottom
+              ) {
+                dialog.close();
+              }
+            });
+          }
+        }
+
+        // Configura os dois diálogos
+        configurarDialog(
+          "openCreditos",
+          "dialogCreditos",
+          "dialogCreditosContent",
+          "../creditos.html"
+        );
+        configurarDialog(
+          "openGlossario",
+          "dialogGlossario",
+          "dialogGlossarioContent",
+          "../glossario.html"
+        );
+      });
+    </script>
+
+    <script>
+      function toggleSection(header) {
+        const content = header.nextElementSibling;
+        const symbol = header.querySelector(".toggle-symbol");
+
+        if (content.style.display === "none" || content.style.display === "") {
+          content.style.display = "block";
+          symbol.classList.remove("fa-plus");
+          symbol.classList.add("fa-minus");
+        } else {
+          content.style.display = "none";
+          symbol.classList.remove("fa-minus");
+          symbol.classList.add("fa-plus");
+        }
+      }
+    </script>
+  </body>
+</html>

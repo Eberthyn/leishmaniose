@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
+@font-face {
+  font-family: "Codec Pro";
+  src: url("../../fonts/CodecPro-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Codec Pro Bold";
+  src: url("../../fonts/Codec\ Pro\ Bold.ttf") format("truetype");
+}
+svg {
+  background: transparent;
+}
+body,
+header,
+footer {
+  font-family: "Codec Pro", sans-serif;
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+.desabilitado {
+  color: #ccc; 
+  cursor: not-allowed;
+}
+.imagem,
+.video {
+  line-height: 1.2;
+}
+
+/* header .img-fluid {
+    min-width: 100% !important;
+    height: 380px !important;
+} */
+
+header {
+  .logoHeader {
+    padding: 0 12px !important;
+
+    @media (max-width: 780px) {
+      padding: 0 12% !important;
+      max-width: 80%;
+    }
+  }
+
+  .tituloHeader {
+    display: flex;
+    justify-items: center;
+    padding: 0% 12% 0% 10% !important;
+    font-weight: 500;
+  }
+
+  .col-md-8 {
+    padding: 0 !important;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  & .row {
+    padding-top: 20px;
+  }
+}

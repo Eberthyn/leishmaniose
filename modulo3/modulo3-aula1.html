@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      h2 {
+        color: #05314a !important;
+        font-size: 4rem !important;
+        width: 50%;
+        padding-bottom: 10px;
+        border-bottom: 3px solid #ff7000;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        text-align: justify;
+      }
+      a {
+        text-decoration: none;
+      }
+      .main-container {
+        /* mesma largura da sidebar */
+        width: calc(100% - 350px); /* ocupa o resto da tela */
+        @media (max-width: 990px) {
+          width: 100%;
+        }
+      }
+      #botaoVoltar:hover,
+      #botaoAvancar:hover {
+        text-decoration: underline;
+      }
+      dialog {
+        width: 50%;
+        height: 85%;
+        max-width: 80%;
+        max-height: 80%;
+        border: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 8px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        z-index: 1000;
+        outline: none;
+        overflow: auto;
+        @media (max-width: 1280px) {
+          width: 620px;
+        }
+      }
+      dialog {
+        @media (max-width: 768px) {
+          width: 78%;
+        }
+      }
+      dialog::backdrop {
+        background-color: rgb(0 0 0 / 0.7);
+      }
+      button.closeDialog {
+        font-size: 1rem;
+        border: none;
+        border-radius: 6px;
+        background-color: var(--primary-color);
+        color: white;
+        width: 100%;
+        height: 6vh;
+        outline: none;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-size: 100%;
+        text-align: center;
+      }
+      .closeDialog:hover {
+        background-color: var(--secondary-color-light);
+      }
+      button.closeDialog {
+        font-size: 1rem;
+        border: none;
+        border-radius: 6px;
+        background-color: #ff7000;
+        color: white;
+        width: 100%;
+        height: 6vh;
+        outline: none;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-size: 100%;
+        text-align: center;
+      }
+      .closeDialog:hover {
+        background-color: #05314a;
+      }
+    </style>
+    <title>Leishmanioses</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="../assets/js/link.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../assets/images/home/IconSite.png"
+    />
+
+    <link href="../assets/css/normalize.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    />
+    <link href="../assets/css/styles.css" rel="stylesheet" />
+    <link href="../assets/css/utilities/fonts.css" rel="stylesheet" />
+    <link href="../assets/css/css/fonts.css" rel="stylesheet" />
+    <link href="../assets/css/css/header.css" rel="stylesheet" />
+    <link href="../assets/css/css/sidebar.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/css copy/animate.min.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/css/css/recursos-visuais/boxes.css"
+    />
+    <link rel="stylesheet" href="../assets/css/css copy/colors.css" />
+  </head>
+
+  <body>
+    <!-- Toolbar -->
+
+    <!-- Sidebar -->
+    <div class="main">
+      <div class="sidebar" role="navigation" id="sidebar">
+        <div class="sidebar__inner">
+          <section class="sidebar__header">
+            <section class="sidebar__section py-0">
+              <img
+                src="../assets/images/logos/LOGO 4 (300 x 130 px).png"
+                alt="Campus Virtual Fiocruz"
+                width="100%"
+              />
+            </section>
+            <h1>
+              leishmanioses:
+              <hr style="border: none" />
+              e eu com isso?
+            </h1>
+          </section>
+          <hr />
+          <section class="sidebar__section py-2">
+            <a
+              href="../index.html"
+              class="sidebar__btn"
+              tabindex="0"
+              role="link"
+            >
+              <span class="material-symbols-rounded" aria-hidden="true"
+                >home</span
+              >Página inicial
+            </a>
+          </section>
+          <nav class="sidebar__section sidebar__section--contrast pb-0">
+            <span class="h6 pre-title">Aulas do módulo 3:</span>
+            <div class="sidebar__topic-list pb-4">
+              <a
+                href="./modulo3-aula1.html"
+                tabindex="0"
+                role="link"
+                class="sidebar__btn sidebar__list-item"
+                ><span
+                  class="material-symbols-rounded"
+                  aria-label="Tópico não concluído"
+                  status="selected"
+                ></span>
+                Fatores físicos e sociais que contribuem para a manutenção e
+                dispersão, agravamento da doença e consequências no processo de
+                transmissão
+              </a>
+
+              <a
+                href="modulo3-aula2.html"
+                tabindex="0"
+                role="link"
+                class="sidebar__btn sidebar__list-item"
+                ><span
+                  class="material-symbols-rounded"
+                  aria-label="Tópico não concluído"
+                  status=""
+                ></span
+                >Processo de urbanização</a
+              >
+
+              <a
+                href="modulo3-aula3.html"
+                tabindex="0"
+                role="link"
+                class="sidebar__btn sidebar__list-item"
+                ><span
+                  class="material-symbols-rounded"
+                  aria-label="Tópico não concluído"
+                  status=""
+                ></span>
+                Ciclos de transmissão das leishmanioses</a
+              >
+              <a
+                href="modulo3-aula4.html"
+                tabindex="0"
+                role="link"
+                class="sidebar__btn sidebar__list-item"
+                ><span
+                  class="material-symbols-rounded"
+                  aria-label="Tópico não concluído"
+                  status=""
+                ></span
+                >Medidas de controle e prevenção das leishmanioses</a
+              >
+
+              <a
+                href="modulo3-quiz.html"
+                tabindex="0"
+                role="link"
+                class="sidebar__btn sidebar__list-item"
+                ><span
+                  class="material-symbols-rounded"
+                  aria-label="Tópico não concluído"
+                  status=""
+                >
+                </span>
+                Quiz</a
+              >
+            </div>
+          </nav>
+
+          <section class="sidebar__section classes">
+            <span class="h6 pre-title">Outros Módulos:</span>
+            <a
+              href="../modulo1/modulo1-aula1.html"
+              tabindex="0"
+              role="link"
+              class="sidebar__btn"
+            >
+              1. O que são as leishmanioses</a
+            >
+            <!-- <a href="../modulo2/introducao.html" tabindex="0" role="link" class="sidebar__btn"> 2. Manifestações clínicas, diagnóstico e tratamento</a> -->
+            <a
+              href="../modulo2/modulo2-aula1.html"
+              tabindex="0"
+              role="link"
+              class="sidebar__btn"
+            >
+              2. Patogênese e Manifestações Clínicas</a
+            >
+            <a
+              href="../modulo4/modulo4-aula1.html"
+              tabindex="0"
+              role="link"
+              class="sidebar__btn"
+            >
+              4. Estratégias para o controle das leishmanioses: diagnóstico,
+              tratamento e Saúde Única</a
+            >
+          </section>
+          <hr />
+
+          <section class="sidebar__section py-2">
+            <a class="sidebar__btn" role="link" id="openGlossario">
+              <span class="material-symbols-rounded">book</span> Glossario</a
+            >
+            <dialog id="dialogGlossario">
+              <div id="dialogGlossarioContent">Carregando...</div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: flex-end;
+                  align-items: center;
+                  margin-top: 10px;
+                "
+              >
+                <button class="closeDialog">Fechar</button>
+              </div>
+            </dialog>
+          </section>
+          <section class="sidebar__section py-2">
+            <a
+              href="../material-complementar.html"
+              class="sidebar__btn"
+              tabindex="0"
+              role="link"
+              data-bs-toggle="modal"
+              data-bs-target="#modal-material-complementar"
+            >
+              <span class="material-symbols-rounded">library_books</span>
+              Apostila</a
+            >
+          </section>
+          <section class="sidebar__section py-2">
+            <a class="sidebar__btn" role="link" id="openCreditos"
+              ><span class="material-symbols-rounded">
+                format_list_bulleted</span
+              >
+              Créditos</a
+            >
+            <dialog id="dialogCreditos">
+              <div id="dialogCreditosContent">Carregando...</div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: flex-end;
+                  align-items: center;
+                  margin-top: 10px;
+                "
+              >
+                <button class="closeDialog">Fechar</button>
+              </div>
+            </dialog>
+          </section>
+          <section class="sidebar__section py-2">
+            <a
+              class="sidebar__btn"
+              tabindex="0"
+              role="link"
+              data-bs-toggle="modal"
+              data-bs-target="#modal-material-complementar"
+              onclick="mostrarToast(event)"
+            >
+              <span class="material-symbols-rounded">exit_to_app</span>
+              Encerramento</a
+            >
+          </section>
+          <section class="sidebar__section py-2">
+            <a
+              class="sidebar__btn"
+              tabindex="0"
+              role="link"
+              data-bs-toggle="modal"
+              data-bs-target="#modal-material-complementar"
+              onclick="mostrarToast(event)"
+            >
+              <span class="material-symbols-rounded">quiz</span>
+              Quiz Final</a
+            >
+          </section>
+        </div>
+      </div>
+
+      <!-- Conteúdo principal -->
+      <div class="content" id="mainContent">
+        <header class="header py-5">
+          <div class="header__inner">
+            <div class="header__title">
+              <div class="container">
+                <div>
+                  <div
+                    class="col-12 col-md-10 col-lg-11 animate__animated animate__fadeIn"
+                    style="animation-delay: 0.5s"
+                  >
+                    <h2
+                      class="title-module"
+                      style="
+                        color: white !important;
+                        font-size: 36px;
+                        font-weight: bold;
+                        margin-bottom: 30px;
+                        margin-top: 50px;
+                        border-bottom: none;
+                        width: auto;
+                        height: auto;
+                        background-color: transparent;
+                      "
+                    >
+                      <span class="h4">Módulo 3</span>
+                      Fatores físicos e sociais que contribuem para a manutenção
+                      e dispersão da doenças
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="conteudo">
+          <p class="indice">Aula 1</p>
+          <h1 style="padding-top: 15px; color: #05314a" class="title-module">
+            Fatores físicos e sociais que contribuem para a manutenção e
+            dispersão, agravamento da doença e consequências no processo de
+            transmissão
+          </h1>
+
+          <hr
+            style="
+              display: block;
+              width: 40px;
+              height: 3px;
+              background: #ff7000;
+              border: none;
+              margin: 0;
+              border-radius: 10px;
+              margin-bottom: 30px;
+            "
+          />
+          <h2>Alterações ambientais</h2>
+
+          <p>
+            As abordagens de saúde e meio ambiente devem ser consideradas tanto
+            nas dimensões globais, como o aquecimento global e a camada de
+            ozônio, quanto em questões locais, que afetam o dia a dia das
+            populações, como o desmatamento e a ausência de saneamento básico,
+            os quais podem afetar a saúde da população.
+          </p>
+
+          <p>
+            Neste contexto, é importante entender como a perda da
+            biodiversidade, as mudanças climáticas, a degradação ambiental e
+            outros problemas ambientais causados por atividades humanas (como
+            consumo de energia, uso da água e urbanização), podem afetar a saúde
+            pública.
+          </p>
+          <p>
+            O Observatório de Saúde Global listou 133 doenças ou grupos de
+            doenças, das quais 101 têm ligações significativas com o meio
+            ambiente. As leishmanioses, um grupo de doenças de caráter
+            antropozoonótico, com alta prevalência em regiões subtropicais,
+            causadas por mais de 20 espécies de protozoários pertencentes ao
+            gênero <i>Leishmania</i>, é reconhecida pela OMS como uma doença
+            negligenciada. Globalmente, cerca de 27% dos casos estão
+            relacionados com as condições ambientais.
+          </p>
+          <p>
+            A leishmaniose apresenta-se sob duas formas principais: a
+            leishmaniose visceral (LV) e a leishmaniose tegumentar (LT). A LV é
+            considerada a mais grave, afetando órgãos como baço, fígado, medula
+            óssea e linfonodos, podendo levar à perda de suas funções e, por
+            conseguinte, caminhar para o óbito quando não tratada corretamente.
+          </p>
+          <p>
+            A LV é endêmica em 78 países, incluindo pelo menos 12 países do
+            continente americano. No Brasil, em 2018, foram registrados 3.460
+            casos de LV, representando 97,14% dos casos na América Latina.
+          </p>
+          <p>
+            A LT também pode evoluir para uma forma crônica, sendo a
+            leishmaniose cutânea (LC) a mais comum, caracterizada por uma única
+            ou mais úlceras na pele que podem seguir para cura espontânea. A
+            leishmaniose mucosa (LM) pode ocorrer devido à cura sem tratamento
+            adequado, causando a destruição das mucosas, podendo também aparecer
+            concomitantemente à lesão cutânea. Há também formas disseminadas
+            cutâneas, infiltrativas e não-ulcerosas, como a leishmaniose cutânea
+            difusa, que afetam indivíduos com sistemas imunológicos
+            comprometidos.
+          </p>
+          <p>
+            A análise histórica mostra que fatores como a implantação de grandes
+            projetos governamentais na Amazônia, desde a década de 1970, estão
+            ligados ao aumento dos casos de LT. Esses projetos envolvem a
+            presença humana nas matas e o desmatamento de grandes áreas
+            florestais.
+          </p>
+          <p>
+            Para analisar a incidência de casos de leishmaniose, é essencial
+            considerar não apenas as variáveis climáticas, mas também os fatores
+            humanos, como a densidade populacional, a pobreza humana e o índice
+            de Pegada Humana Terrestre Global (HFP), que se relacionam
+            principalmente com a caça, exploração madeireira e habitação nas
+            bordas das florestas.
+          </p>
+          <p>
+            O desmatamento (Figura 26) da vegetação nativa facilita a adaptação
+            dos vetores e reservatórios da doença, como o gambá (Didelphis
+            albiventris), fora de seu ambiente natural. A ação humana sobre o
+            meio ambiente é um fator chave para o aumento dos casos de
+            leishmaniose no Brasil. A degradação ambiental progressiva tem
+            levado espécies que antes viviam exclusivamente em florestas a
+            migrarem para áreas urbanas, favorecendo a propagação da doença,
+            especialmente em regiões com condições sociais precárias.
+          </p>
+          <!-- Imagem 1 -->
+          <div class="row centro">
+            <div class="col-md-10 imagem">
+              <img
+                src="../assets/images/modulo3/aula1/mod3foto1.jpg"
+                class="img-fluid"
+              />
+              <div>
+                <small
+                  ><strong>Figura 26.</strong>Desmatamento da vegetação nativa
+                  para moradia e plantação de
+                  monocultura.<strong>Fonte:</strong>Ministério da Saúde</small
+                >
+              </div>
+            </div>
+          </div>
+          <h2>Mudanças climáticas</h2>
+          <p>
+            Estudos mostram que as mudanças climáticas têm grande impacto na
+            disseminação de doenças como as leishmanioses. Alterações na
+            temperatura e nas chuvas influenciam a presença e a atividade dos
+            flebotomíneos que transmitem a doença. Tanto a saúde humana quanto a
+            animal sofrem com essas mudanças, que afetam os ecossistemas e
+            facilitam a propagação de doenças infecciosas.
+          </p>
+          <p>
+            Períodos prolongados de seca ou de chuva podem afetar o ciclo de
+            vida dos de insetos e a imunidade dos hospedeiros, tornando-os mais
+            suscetíveis à infecção. Isso facilita a transmissão de doenças como
+            a malária, leishmanioses e outras arboviroses.
+          </p>
+          <p>
+            Evidências indicam que os flebotomíneos que transmitem as
+            leishmanioses são mais ativos logo após a estação chuvosa, quando
+            sua população aumenta em áreas endêmicas.
+          </p>
+          <p>
+            No Brasil, onde cerca de 350 milhões de pessoas estão em risco de
+            infecção, aproximadamente 12 milhões já foram infectadas, com cerca
+            de dois milhões de novos casos por ano.
+          </p>
+          <p>
+            Os flebotomíneos que transmitem as leishmanioses adaptam-se
+            facilmente a diferentes temperaturas e ambientes, incluindo áreas
+            próximas a residências e abrigos de animais. Isso torna essencial o
+            desenvolvimento de políticas públicas para combater e controlar a
+            doença, especialmente em regiões mais vulneráveis.
+          </p>
+          <p>
+            Projeções indicam que, até o final do século, o Brasil pode
+            apresentar um aumento significativo nos casos de leishmanioses
+            devido às alterações climáticas. Todas as regiões do país
+            enfrentarão esse crescimento, com a região Sul mostrando um aumento
+            particularmente acentuado nas internações anuais, cerca de 228%.
+          </p>
+          <h2>Condições econômicas da população</h2>
+          <p>
+            Estudos mostram que municípios com melhores índices de
+            desenvolvimento têm melhores condições educacionais e mais acesso à
+            informação. Desse modo, o ensino em saúde é considerado uma das
+            ferramentas essenciais para a promoção da saúde, pois permite a
+            capacitação da população quanto à importância de prevenir doenças.
+            As leishmanioses apresentam uma expansão em quase todo o território
+            brasileiro, ganhando destaque naqueles municípios com crescente
+            urbanização e altos índices de pobreza
+          </p>
+          <p>
+            Modelos experimentais sugerem que um aumento de 1% na taxa de
+            pobreza pode resultar em um aumento de 5% nos casos de leishmaniose.
+            Em contrapartida, um aumento na renda per capita pode reduzir os
+            casos. Portanto, municípios com baixo desenvolvimento econômico
+            tendem a ter mais casos de leishmanioses.
+          </p>
+          <p>
+            O controle das leishmanioses em áreas endêmicas é complexo e envolve
+            não apenas o setor de saúde, mas também áreas sociais e econômicas.
+            Piores condições sociais e econômicas aumentam a probabilidade de
+            novos casos. Assim, é essencial a criação de programas sociais para
+            melhorar as condições financeiras e sociais da população.
+          </p>
+          <p>
+            A falta de saneamento básico, como a ausência de coleta de lixo em
+            bairros periféricos, pode criar um ambiente favorável para a
+            transmissão da doença. As unidades de saúde precisam estar
+            preparadas para prevenir e tratar as leishmanioses, especialmente em
+            áreas com condições sociais precárias.
+          </p>
+          <h2>Migração das populações</h2>
+          <p>
+            Há poucas informações sobre o papel da mobilidade populacional na
+            manutenção das leishmanioses. Em áreas rurais, a maioria dos casos é
+            autóctone, enquanto nas áreas urbanas, os casos geralmente estão
+            ligados a migrantes, com uma predominância no sexo masculino.
+          </p>
+          <p>
+            Entre os casos notificados de leishmaniose tegumentar, observa-se
+            uma maior ocorrência na população residente em áreas rurais com a
+            proporção dos casos sendo variada nas diferentes áreas endêmicas.
+          </p>
+          <p>
+            No Brasil, a transmissão da leishmaniose tegumentar ocorre em três
+            principais contextos: na natureza, quando o homem entra em contato
+            com o ambiente selvagem; em áreas ocupadas para lazer ou trabalho; e
+            em zonas rurais e periurbanas, muitas vezes relacionadas a migração
+            para áreas de floresta ou encostas.
+          </p>
+          <p>
+            Pessoas que migram para áreas de floresta ou encostas são mais
+            vulneráveis à infecção. Isso reflete a realidade da população de
+            baixa renda, que frequentemente não tem acesso a moradias adequadas
+            e acaba ocupando áreas onde a transmissão das leishmanioses é mais
+            comum.
+          </p>
+          <p>
+            Nas áreas rurais, a proximidade das casas com galinheiros,
+            chiqueiros e matas facilita a infecção por <i>Leishmania</i>.
+          </p>
+          <p>
+            Casos de leishmanioses nas áreas urbanas ou periurbanas são muitas
+            vezes atribuídos a antigos moradores rurais que mantêm hábitos que
+            podem criar condições favoráveis para a circulação de reservatórios
+            de <i>Leishmania</i> e a proliferação de flebotomíneos.
+          </p>
+          <p>
+            A alta incidência de casos entre jovens e mulheres, que
+            provavelmente adquiriram a infecção em suas casas ou arredores,
+            sugere que a transmissão domiciliar e peridomiciliar é comum em
+            áreas endêmicas. Mesmo que essas pessoas vivam permanentemente na
+            zona rural, a vulnerabilidade não está necessariamente ligada ao
+            trabalho agrícola, pois muitas estão envolvidas em atividades
+            domésticas.
+          </p>
+
+          <div class="col-12 col-md-10 col-lg-8">
+            <div
+              class="card-box card border-0 shadow"
+              style="border-radius: 20px"
+            >
+              <div class="box-title">
+                <span
+                  class="h5"
+                  style="
+                    border-bottom: 1px solid var(--primary-color-light);
+                    color: var(--secondary-color-light);
+                  "
+                >
+                  <span
+                    class="box-title__icone material-symbols-rounded"
+                    aria-hidden="true"
+                    >add</span
+                  >
+                  Pense sobre...
+                </span>
+                <div class="boxes-content">
+                  <p>
+                    Pense sobre sua região e os fatores que discutimos: Qual
+                    fator você acha que mais contribui para o aumento dos casos
+                    de leishmanioses na sua área?
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botões de navegação -->
+        <div class="row botao" style="display: flex" id="buttons-hover">
+          <a
+            href="../mapas/modulo3/a1.html"
+            class="btn btn-sm"
+            id="botaoVoltar"
+            role="button"
+            alt="Voltar"
+            style="border: none; color: white; background-color: #f77f00"
+          >
+            <strong>Mapa Mental</strong></a
+          >
+          <a
+            href="../paginaTextoApio/textoApoio.html?modulo=3&aula=1"
+            class="btn btn-sm"
+            id="botaoAvancar"
+            role="button"
+            alt="Avancar"
+            style="
+              margin-right: 30px;
+              background-color: white;
+              color: #f77f00;
+              border: 1px solid #f77f00;
+            "
+          >
+            <strong>Texto de Apoio</strong></a
+          >
+        </div>
+
+        <div
+          class="row botao"
+          style="
+            border-top: 2px solid transparent;
+            border-image: linear-gradient(
+              95deg,
+              rgba(255, 255, 255, 1) 0%,
+              rgba(247, 127, 0, 1) 50%,
+              rgba(255, 255, 255, 1) 100%
+            );
+            border-image-slice: 1;
+            border-radius: 15px;
+          "
+        >
+          <a
+            href="../modulo2/modulo2-aula1.html"
+            class="btn btn-sm"
+            id="botaoVoltar"
+            role="button"
+            alt="Voltar"
+          >
+            <strong><i class="fas fa-chevron-left"></i>Modulo 2</strong></a
+          >
+          <a
+            href="modulo3-aula2.html"
+            class="btn btn-sm"
+            id="botaoAvancar"
+            role="button"
+            style="margin-right: 30px"
+            alt="Avançar"
+          >
+            <strong>Módulo 3 Aula 2<i class="fas fa-chevron-right"></i></strong
+          ></a>
+        </div>
+
+        <!-- Rodapé -->
+        <footer>
+          <div class="row-main">
+            <div class="col-md-12 centro">
+              <img
+                class="img-fluid centro"
+                src="../assets/images/rodape/RÉGUA LOGO.png"
+                alt="Rodapé"
+              />
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Arquivos JS -->
+    <div id="sidebar-toggle">
+      <div class="box">
+        <div class="btn not-active">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="../assets/js/video.js"></script>
+    <script type="text/javascript" src="../assets/js/toast.js"></script>
+    <script type="text/javascript" src="../assets/js/sidebar.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <script>
+      // Aguarda o carregamento completo do DOM antes de executar qualquer código JavaScript
+      document.addEventListener("DOMContentLoaded", function () {
+        // Função genérica para abrir e carregar conteúdo em um diálogo
+        function configurarDialog(botaoId, dialogId, contentId, arquivoHtml) {
+          const botao = document.getElementById(botaoId);
+          const dialog = document.getElementById(dialogId);
+          const content = document.getElementById(contentId);
+
+          // Verifica se o botão e o diálogo existem
+          if (botao && dialog && content) {
+            botao.addEventListener("click", async () => {
+              dialog.showModal();
+              try {
+                const response = await fetch(arquivoHtml);
+                const texto = await response.text();
+                content.innerHTML = texto;
+              } catch (err) {
+                content.textContent = "Erro ao carregar o conteúdo.";
+              }
+            });
+
+            // Fechar clicando no botão 'Fechar'
+            dialog
+              .querySelector(".closeDialog")
+              .addEventListener("click", () => {
+                dialog.close();
+              });
+
+            // Fechar clicando fora da caixa (backdrop)
+            dialog.addEventListener("click", (event) => {
+              const rect = dialog.getBoundingClientRect();
+              if (
+                event.clientX < rect.left ||
+                event.clientX > rect.right ||
+                event.clientY < rect.top ||
+                event.clientY > rect.bottom
+              ) {
+                dialog.close();
+              }
+            });
+          }
+        }
+
+        // Configura os dois diálogos
+        configurarDialog(
+          "openCreditos",
+          "dialogCreditos",
+          "dialogCreditosContent",
+          "../creditos.html"
+        );
+        configurarDialog(
+          "openGlossario",
+          "dialogGlossario",
+          "dialogGlossarioContent",
+          "../glossario.html"
+        );
+      });
+    </script>
+
+    <script>
+      function toggleSection(header) {
+        const content = header.nextElementSibling;
+        const symbol = header.querySelector(".toggle-symbol");
+
+        if (content.style.display === "none" || content.style.display === "") {
+          content.style.display = "block";
+          symbol.classList.remove("fa-plus");
+          symbol.classList.add("fa-minus");
+        } else {
+          content.style.display = "none";
+          symbol.classList.remove("fa-minus");
+          symbol.classList.add("fa-plus");
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Leishmanioses</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="../assets/js/link.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/images/home/IconSite.png"
+    />
+
+    <link href="./assets/css/styles.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    />
+    <link href="./assets/css/styles.css" rel="stylesheet" />
+  </head>
+  <style>
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: Amatic SC, sans-serif;
+    }
+    h2 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      margin-top: 50px;
+    }
+    h1 {
+      color: #05314a;
+      font-weight: bolder;
+      font-size: 2.7rem;
+      margin: 0.67em 0;
+    }
+    .glossario-section {
+      border-bottom: 2px solid #05314a;
+      padding: 30px;
+    }
+    #first-section:hover {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-top: 4px solid #05314a;
+    }
+    #last-section:hover {
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    .glossario-section:hover {
+      border: 4px solid #05314a;
+      border-top: 2px solid #05314a;
+      transition: border 0.1s ease, transform 0.1s ease;
+    }
+    .glossario-section:focus {
+      border: none;
+    }
+
+    .glossario-header {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #05314a;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .glossario-class {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 0px;
+    }
+    .glossario-content {
+      list-style: none;
+      display: none;
+      padding-left: 0;
+    }
+
+    .glossario-content li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .glossario-content ::before {
+      font-weight: bold;
+      color: #ff7f50; /* ou outro que combine com seu layout */
+    }
+
+    .tituloLista {
+      font-weight: bold;
+    }
+    .toggle-symbol {
+      float: right;
+      color: #ffdec0;
+    }
+  </style>
+  <body>
+    <!-- Toolbar -->
+
+    <div class="row centro" id="row-main">
+      <!-- Sidebar -->
+
+      <!-- Conteúdo Principal -->
+      <div
+        style="
+          width: 100%;
+          padding: 30px;
+
+          display: flex;
+          flex-direction: column;
+        "
+      >
+        <div class="text-center">
+          <div>
+            <h1
+              style="
+                color: var(--secondary-color-light);
+                font-size: 4.5rem;
+                font-weight: bolder;
+                border-bottom: 2px solid var(--primary-color-light);
+                padding-bottom: 20px;
+              "
+            >
+              Glossário
+            </h1>
+          </div>
+          <div id="glossario" class="glossario-class">
+            <div class="glossario-section" id="first-section">
+              <div class="glossario-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus toggle-symbol"></i> A
+              </div>
+              <ul class="glossario-content" style="list-style: none">
+                <li>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: left;
+                    "
+                  >
+                    <h1>Agente etiológico</h1>
+                    <p>
+                      Organismo responsável por causar uma doença. No caso da
+                      leishmaniose, o agente etiológico é um protozoário do
+                      gênero Leishmania.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: left;
+                    "
+                  >
+                    <h1>Amastigota</h1>
+                    <p>
+                      Forma intracelular do protozoário Leishmania, sem flagelo,
+                      encontrada dentro dos macrófagos no hospedeiro mamífero.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: left;
+                    "
+                  >
+                    <h1>Anergia</h1>
+                    <p>
+                      Estado de ausência ou fraqueza de resposta imunológica a
+                      um determinado antígeno, o que pode favorecer a
+                      disseminação da leishmaniose.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Anticorpo</h1>
+                    <p>
+                      Proteína produzida pelo sistema imunológico para combater
+                      agentes invasores.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Antígeno</h1>
+                    <p>Substância que estimula a produção de anticorpos</p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Antropozoonose</h1>
+                    <p>Doença transmitida de animais para humanos.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="glossario-section">
+              <div class="glossario-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus toggle-symbol"></i> B
+              </div>
+              <ul class="glossario-content" style="list-style: square">
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Biópsia</h1>
+                    <p>
+                      Procedimento médico para retirar uma amostra de tecido
+                      para análise.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="glossario-section">
+              <div class="glossario-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus toggle-symbol"></i> C
+              </div>
+              <ul class="glossario-content" style="list-style: square">
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Cadeia de transmissão</h1>
+                    <p>
+                      Sequência de eventos que mantém a circulação da doença.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Ciclo biológico</h1>
+                    <p>
+                      Estágios da vida de um organismo. No caso da Leishmania,
+                      envolve vetor e hospedeiro.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Coinfecção (Leishmaniose e HIV)</h1>
+                    <p>
+                      Presença simultânea das duas infecções, agravando o quadro
+                      clínico.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Controle vetorial</h1>
+                    <p>
+                      Medidas para combater os vetores transmissores da doença.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="glossario-section">
+              <div class="glossario-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus toggle-symbol"></i> D
+              </div>
+              <ul class="glossario-content">
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Diagnóstico molecular</h1>
+                    <p>Detecta o DNA do parasito (ex: PCR).</p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Diagnóstico parasitológico</h1>
+                    <p>Visualiza o parasito diretamente em amostras.</p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Doença Negligenciada</h1>
+                    <p>
+                      Doença com pouco investimento em tratamento e pesquisa.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="glossario-section">
+              <div class="glossario-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus toggle-symbol"></i> E
+              </div>
+              <ul class="glossario-content">
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Epidemiologia</h1>
+                    <p>
+                      Estudo da distribuição e fatores das doenças nas
+                      populações.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="glossario-section">
+              <div class="glossario-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus toggle-symbol"></i> H
+              </div>
+              <ul class="glossario-content">
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Hematofagia</h1>
+                    <p>
+                      Alimentação baseada em sangue. Só as fêmeas do vetor o
+                      fazem.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Hiperergia</h1>
+                    <p>
+                      Resposta imune exagerada, pode causar inflamações severas.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Hospedeiro</h1>
+                    <p>Organismo que abriga o parasito.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="glossario-section">
+              <div class="glossario-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus toggle-symbol"></i> I
+              </div>
+              <ul class="glossario-content">
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Imunidade</h1>
+                    <p>Capacidade de defesa do organismo.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="glossario-section">
+              <div class="glossario-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus toggle-symbol"></i> L
+              </div>
+              <ul class="glossario-content">
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Leishmania</h1>
+                    <p>Protozoário causador da leishmaniose.</p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Leishmaniose Cutânea</h1>
+                    <p>Lesões na pele.</p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Leishmaniose Difusa</h1>
+                    <p>Lesões múltiplas e sem cicatrização.</p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Leishmaniose Mucosa</h1>
+                    <p>Acomete mucosas do nariz, boca e garganta.</p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Leishmaniose Tegumentar</h1>
+                    <p>Conjunto de manifestações da pele e mucosas.</p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Leishmaniose Visceral</h1>
+                    <p>Forma grave que afeta órgãos internos.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="glossario-section">
+              <div class="glossario-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus toggle-symbol"></i> M
+              </div>
+              <ul class="glossario-content">
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Macrófagos</h1>
+                    <p>Células que fagocitam agentes infecciosos.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="glossario-section">
+              <div class="glossario-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus toggle-symbol"></i> P
+              </div>
+              <ul class="glossario-content">
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>parasito</h1>
+                    <p>Organismo que vive às custas de outro.</p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Patogenia</h1>
+                    <p>Processo pelo qual um agente infeccioso causa doença.</p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>PCR</h1>
+                    <p>Técnica laboratorial de detecção genética.</p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Prevenção</h1>
+                    <p>Medidas para evitar a transmissão.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="glossario-section">
+              <div class="glossario-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus toggle-symbol"></i> R
+              </div>
+              <ul class="glossario-content">
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Reservatórios</h1>
+                    <p>
+                      Animais que hospedam o parasito e participam da cadeia de
+                      transmissão.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="glossario-section" id="last-section">
+              <div class="glossario-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus toggle-symbol"></i> V
+              </div>
+              <ul class="glossario-content">
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Vetores</h1>
+                    <p>Insetos que transmitem o parasito.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Botões de navegação -->
+      </div>
+      <!-- Rodapé -->
+    </div>
+    <!-- Arquivos JS -->
+    <div id="sidebar-toggle">
+      <div class="box">
+        <div class="btn not-active">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="../assets/js/video.js"></script>
+    <script type="text/javascript" src="../assets/js/toast.js"></script>
+    <script type="text/javascript" src="../assets/js/sidebar.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script>
+      function toggleSection(header) {
+        const content = header.nextElementSibling;
+        const symbol = header.querySelector(".toggle-symbol");
+
+        if (content.style.display === "none" || content.style.display === "") {
+          content.style.display = "flex";
+          symbol.classList.remove("fa-plus");
+          symbol.classList.add("fa-minus");
+        } else {
+          content.style.display = "none";
+          symbol.classList.remove("fa-minus");
+          symbol.classList.add("fa-plus");
+        }
+      }
+    </script>
+  </body>
+</html>

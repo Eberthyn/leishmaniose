@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Leishmanioses</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../assets/images/home/IconSite.png"
+    />
+
+    <link href="../../assets/css/utilities/normalize.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    />
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+    <link href="../styles.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.5/dist/style.css"
+    />
+  </head>
+  <body>
+    <div
+      id="popup"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #c40f17;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        z-index: 1000;
+      "
+    >
+      <span
+        >💡 Clique nas bolinhas do mapa mental para interagir e dê zoom para
+        explorar mais informações!</span
+      >
+      <button
+        onclick="closePopup()"
+        style="
+          margin-left: 15px;
+          background-color: white;
+          color: black;
+          border: none;
+          padding: 8px 10px;
+          cursor: pointer;
+          border-radius: 5px;
+        "
+      >
+        Fechar
+      </button>
+    </div>
+    <div class="sidebar-mobile">
+      <button class="button-side" onclick="window.history.back()">
+        Voltar
+      </button>
+      <button
+        class="button-side"
+        onclick="window.location.href='../../index.html' "
+      >
+        Pagina Inicial
+      </button>
+    </div>
+    <main class="content">
+      <img
+        src="../../assets/images/home/LOGOMARCA.svg"
+        class="top-image"
+        style="height: 20vh"
+      />
+      <svg id="mindmap"></svg>
+    </main>
+    <div class="container" id="mobile-container">
+      <header class="main-header">
+        <img
+          src="../../assets/images/logos/LOGO 4 (300 x 130 px).png"
+          alt="Logo"
+          class="logo"
+        />
+        <nav>
+          <button onclick="window.history.back()">Voltar</button>
+          <button onclick="window.location.href='../../index.html'">
+            Página Inicial
+          </button>
+        </nav>
+      </header>
+      <aside class="sidebar">
+        <img
+          src="../../assets/images/logos/LOGO 4 (300 x 130 px).png"
+          alt="Logo"
+          class="logo"
+        />
+        <a class="button-side" onclick="window.history.back()"> Voltar </a>
+        <a
+          class="button-side"
+          onclick="window.location.href='../../index.html' "
+        >
+          Página Inicial
+        </a>
+      </aside>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.5/dist/browser/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.5/dist/index.js"></script>
+    <script>
+      (() => {
+        setTimeout(() => {
+          const { markmap: x, mm: K } = window,
+            P = new x.Toolbar();
+          P.attach(K);
+          const F = P.render();
+          F.setAttribute("style", "position:absolute;bottom:20px;right:20px"),
+            document.body.append(F);
+        });
+      })();
+    </script>
+    <script>
+      ((b, L, T, D) => {
+        const H = b();
+        window.mm = H.Markmap.create(
+          "svg#mindmap",
+          (L || H.deriveOptions)(D),
+          T
+        );
+      })(
+        () => window.markmap,
+        null,
+        {
+          content:
+            "Diferentes formas clínicas associadas a diferentes espécies de <i>Leishmania</i> e seus respectivos vetores",
+          children: [
+            {
+              content: "1. Visão Geral",
+              children: [
+                {
+                  content:
+                    "<strong>Leishmanioses</strong>: Doenças causadas por diferentes espécies de <em><i>Leishmania</i></em>, com diferentes formas clínicas.",
+                  children: [],
+                  payload: { tag: "li", lines: "4,6" },
+                },
+              ],
+              payload: { tag: "h2", lines: "3,4" },
+            },
+            {
+              content: "2. Formas Clínicas das Leishmanioses",
+              children: [
+                {
+                  content: "2.1. Leishmaniose Tegumentar",
+                  children: [
+                    {
+                      content: "2.1.1. Manifestações Clínicas",
+                      children: [
+                        {
+                          content:
+                            "<strong>Lesões na pele</strong>: Podem ser únicas, múltiplas ou disseminadas.",
+                          children: [],
+                          payload: { tag: "li", lines: "11,12" },
+                        },
+                        {
+                          content:
+                            "<strong>Leishmaniose Mucosa</strong>: Quando afeta as mucosas.",
+                          children: [],
+                          payload: { tag: "li", lines: "12,13" },
+                        },
+                        {
+                          content:
+                            "<strong>Leishmaniose Muco Cutânea</strong>: Quando afeta tanto a pele quanto as mucosas.",
+                          children: [],
+                          payload: { tag: "li", lines: "13,14" },
+                        },
+                        {
+                          content:
+                            "<strong>Leishmaniose Difusa</strong>: Quando as lesões se disseminam por diversas partes do corpo.",
+                          children: [],
+                          payload: { tag: "li", lines: "14,16" },
+                        },
+                      ],
+                      payload: { tag: "h4", lines: "10,11" },
+                    },
+                    {
+                      content: "2.1.2. Impacto na Vida do Paciente",
+                      children: [
+                        {
+                          content:
+                            "<strong>Qualidade de vida</strong>: Perda da qualidade de vida, estigma social.",
+                          children: [],
+                          payload: { tag: "li", lines: "17,18" },
+                        },
+                        {
+                          content:
+                            "<strong>Dificuldades</strong>: Dificuldades de alimentação e respiração nas formas mucosas.",
+                          children: [],
+                          payload: { tag: "li", lines: "18,19" },
+                        },
+                        {
+                          content:
+                            "<strong>Prognóstico</strong>: Não costuma levar a óbito.",
+                          children: [],
+                          payload: { tag: "li", lines: "19,21" },
+                        },
+                      ],
+                      payload: { tag: "h4", lines: "16,17" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "7,8" },
+                },
+                {
+                  content: "2.2. Leishmaniose Visceral",
+                  children: [
+                    {
+                      content: "2.2.1. Manifestações Clínicas",
+                      children: [
+                        {
+                          content:
+                            "<strong>Sintomas</strong>: Febre, emagrecimento, fraqueza, inchaço do abdômen.",
+                          children: [],
+                          payload: { tag: "li", lines: "25,26" },
+                        },
+                        {
+                          content:
+                            "<strong>Gravidade</strong>: Forma grave, pode levar à morte se não tratada.",
+                          children: [],
+                          payload: { tag: "li", lines: "26,28" },
+                        },
+                      ],
+                      payload: { tag: "h4", lines: "24,25" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "21,22" },
+                },
+              ],
+              payload: { tag: "h2", lines: "6,7" },
+            },
+            {
+              content: "3. Espécies de <i>Leishmania</i> e seus Vetores",
+              children: [
+                {
+                  content:
+                    "3.1. Relação entre Espécies de <i>Leishmania</i> e Vetores",
+                  children: [
+                    {
+                      content:
+                        "Uma espécie de <em><i>Leishmania</i></em> pode ser transmitida por várias espécies de flebotomíneos.",
+                      children: [],
+                      payload: { tag: "li", lines: "30,31" },
+                    },
+                    {
+                      content:
+                        "<strong>Vetores</strong>: Insetos flebotomíneos (subfamília Phlebotominae).",
+                      children: [],
+                      payload: { tag: "li", lines: "31,33" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "29,30" },
+                },
+                {
+                  content: "3.2. Ciclos de Ocorrência",
+                  children: [
+                    {
+                      content:
+                        "<strong>Diversidade de Vetores</strong>: Cada vetor pode estar associado a diferentes formas clínicas e espécies de <em><i>Leishmania</i></em>.",
+                      children: [],
+                      payload: { tag: "li", lines: "34,35" },
+                    },
+                    {
+                      content:
+                        "<strong>Complexidade</strong>: A transmissão das leishmanioses pode variar dependendo da espécie do parasito e do vetor.",
+                      children: [],
+                      payload: { tag: "li", lines: "35,37" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "33,34" },
+                },
+              ],
+              payload: { tag: "h2", lines: "28,29" },
+            },
+            {
+              content: "4. Aspectos Importantes",
+              children: [
+                {
+                  content:
+                    "<strong>Hospedeiros Reservatórios</strong>: Não incluídos no quadro, mas são importantes para o ciclo das leishmanioses.",
+                  children: [],
+                  payload: { tag: "li", lines: "38,39" },
+                },
+                {
+                  content:
+                    "<strong>Curiosidades</strong>: Algumas espécies de <em><i>Leishmania</i></em> e seus vetores têm características únicas relacionadas às formas clínicas.",
+                  children: [],
+                  payload: { tag: "li", lines: "39,40" },
+                },
+              ],
+              payload: { tag: "h2", lines: "37,38" },
+            },
+          ],
+          payload: { tag: "h1", lines: "1,2" },
+        },
+        null
+      );
+    </script>
+    <script>
+      // Função para exibir o popup ao carregar a página
+      window.onload = function () {
+        document.getElementById("popup").style.display = "block";
+      };
+
+      // Função para fechar o popup
+      function closePopup() {
+        const popup = document.getElementById("popup");
+        const sidebar = document.querySelector(".sidebar");
+
+        // Fechar o popup
+        popup.style.display = "none";
+
+        // Ajustar a margem superior da sidebar para ocupar o espaço vazio
+        const popupHeight = popup.offsetHeight; // Altura do popup
+        sidebar.style.marginTop = `1.1px`; // Subtrai a altura do popup
+      }
+    </script>
+  </body>
+</html>

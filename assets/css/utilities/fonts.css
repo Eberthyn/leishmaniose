@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=La+Belle+Aurore&family=Love+Light&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@font-face {
+  font-family: "Codec Pro";
+  src: url("../../fonts/CodecPro-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Codec Pro Bold";
+  src: url("../../fonts/Codec\ Pro\ Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Josefin Sans Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/JosefinSans-Bold.ttf");
+}
+
+h3 {
+  color: #05314a;
+}
+
+h1,
+h2,
+h3,
+b {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-style: bold;
+}
+a,
+span {
+  font-family: "Codec Pro", sans-serif;
+  font-size: 22px;
+}
+p h1 {
+  font-size: 42px;
+  margin-bottom: 30px;
+  margin-top: 50px;
+  /*max-width: 58ch*/
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+a {
+  word-wrap: break-word;
+  color: black;
+  text-decoration: underline;
+}
+
+.botao,
+.col-xl-4 {
+  a {
+    text-decoration: none;
+  }
+}
+
+.col-xl-4 {
+  a {
+    color: white;
+  }
+
+  .cards {
+    min-height: 642px !important;
+  }
+
+  .card-header {
+    min-height: 157px !important;
+  }
+}
+
+p {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.listaTexto {
+  margin-bottom: 0 !important;
+}
+
+p.indice {
+  margin-bottom: -35px;
+  margin-top: 50px;
+  font-size: 32px;
+  color: #f77f00;
+  font-weight: bold;
+  font-family: "Prelo Bold";
+}
+
+p.tituloLista {
+  margin: 0px;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #05314a;
+  padding: 30px 0px 10px 0px;
+  font-family: "Amatic SC", sans-serif;
+}
+
+.iconeMenu .card-title {
+  margin-top: 0px !important;
+  font-size: max(15px, 1.3vw);
+}
+
+.video,
+.imagem {
+  margin: 10px 0 40px 0 !important;
+
+  .col-lg-8,
+  .col-lg-4,
+  .col-md-6 {
+    padding: 15px !important;
+  }
+}
+
+.imagem {
+  h3 {
+    color: #00abcb;
+  }
+}
+
+.video {
+  h3 {
+    color: #7f0c21;
+  }
+}
+
+.imagem .lista-imagem {
+  padding: 0 !important;
+  margin-top: 40px;
+}
+
+.imagem-mapeada {
+  max-width: 100%;
+}
+
+.title-module {
+  font-size: 4rem;
+  @media (max-width: 612px) {
+    font-size: 10vw;
+  }
+}

@@ -1,0 +1,125 @@
+.div-video {
+  width: 100%;
+  position: relative;
+  margin-top: 3rem;
+  padding-bottom: 56.25%;
+  height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 980px) {
+    position: relative;
+    width: 100%; /* A largura será 100% do seu contêiner pai */
+    padding-bottom: 100%; /* Define a altura como igual à largura, criando um quadrado */
+  }
+}
+.div-video2 {
+  width: 100%;
+  position: relative;
+  margin-top: 3rem;
+  padding-bottom: 56.25%;
+  height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 980px) {
+    position: relative;
+    width: 100%; /* A largura será 100% do seu contêiner pai */
+    padding-bottom: 100%; /* Define a altura como igual à largura, criando um quadrado */
+    overflow: hidden;
+  }
+}
+.div-video3 {
+  width: 100%;
+  position: relative;
+  margin-top: 3rem;
+  padding-bottom: 56.25%;
+  height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 980px) {
+    position: relative;
+    width: 100%; /* A largura será 100% do seu contêiner pai */
+    padding-bottom: 100%; /* Define a altura como igual à largura, criando um quadrado */
+  }
+}
+
+.iframe-video {
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  top: 0;
+  left: 22%;
+  @media (max-width: 980px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 56.25%;
+  }
+}
+.video-index {
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 1200px) {
+    position: relative;
+    width: 100%; /* A largura será 100% do seu contêiner pai */
+    padding-bottom: 100%; /* Define a altura como igual à largura, criando um quadrado */
+    overflow: hidden;
+  }
+}
+.iframe-index {
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  top: 0;
+  left: 22%;
+  @media (max-width: 1200px) {
+    position: absolute;
+    top: 0;
+    left: 11%;
+    width: 80%;
+    height: 45%;
+  }
+}
+.margin-video {
+  @media (max-width: 980px) {
+    margin-top: -130px;
+  }
+}
+.margin-video-index {
+  margin-top: -20%;
+  @media (max-width: 1200px) {
+    margin-top: -30%;
+  }
+}
+.button-video,
+.button-video2 {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  color: #05314a !important;
+  font-weight: 300;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button-video:hover,
+.button-video2:hover {
+  background-color: #ff7000;
+  color: white !important;
+  text-decoration: none;
+  font-weight: 300;
+  transition: background-color 0.5s ease;
+}
