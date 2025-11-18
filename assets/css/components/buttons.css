@@ -6,6 +6,7 @@
   font-family: "Prelo Bold";
   src: url(../fonts/Prelo-Bold.ttf) format("truetype");
 }
+
 .row.botao {
   text-align: center;
   display: flex;
@@ -95,23 +96,31 @@
   justify-content: center;
   align-items: center;
   padding-bottom: 65px;
+  gap: 10px;
+
 }
 
 .botaoAvaliacao {
-  background-color: #17a1c2;
+  background-color: white;
+  color: #f77f00;
+  border: 1px solid #f77f00 !important;
 }
 
 .botaoMatricula {
-  background-color: #7f0c21;
+  background-color: #f77f00;
+  color: white;
 }
 
 .botaoAvaliacao,
 .botaoMatricula {
   width: 180px;
   height: 44px;
-  color: white;
   cursor: pointer;
   border: 0;
+
+  & a {
+    text-decoration: none;
+  }
 }
 
 .instrucaoBtn {
@@ -120,6 +129,7 @@
   margin: 10px 0px;
   text-align: center;
 }
+
 #sidebarButton {
   position: fixed;
   color: white;

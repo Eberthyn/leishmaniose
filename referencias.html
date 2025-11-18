@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+
+  <title>Leishmanioses</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="../assets/js/link.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <link rel="icon" type="image/x-icon" href="./assets/images/home/IconSite.png" />
+
+  <link href="./assets/css/styles.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" />
+  <link href="./assets/css/styles.css" rel="stylesheet" />
+</head>
+<style>
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: Amatic SC, sans-serif;
+  }
+
+  h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 50px;
+  }
+
+  h1 {
+    color: #05314a;
+    font-weight: bolder;
+    font-size: 2.7rem;
+    margin: 0.67em 0;
+  }
+
+  a {
+    font-size: 18px;
+  }
+
+  .glossario-section {
+    border-bottom: 2px solid #05314a;
+    padding: 30px;
+  }
+
+  #first-section:hover {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top: 4px solid #05314a;
+  }
+
+  #last-section:hover {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .glossario-section:hover {
+    border: 4px solid #05314a;
+    border-top: 2px solid #05314a;
+    transition: border 0.1s ease, transform 0.1s ease;
+  }
+
+  .glossario-section:focus {
+    border: none;
+  }
+
+  .glossario-header {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #05314a;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .glossario-class {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0px;
+  }
+
+  .glossario-content {
+    list-style: none;
+    display: none;
+    padding-left: 0;
+  }
+
+  .glossario-content li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .glossario-content ::before {
+    font-weight: bold;
+    color: #ff7f50;
+    /* ou outro que combine com seu layout */
+  }
+
+  .tituloLista {
+    font-weight: bold;
+  }
+
+  .toggle-symbol {
+    float: right;
+    color: #ffdec0;
+  }
+</style>
+
+<body>
+  <!-- Toolbar -->
+
+  <div class="row centro" id="row-main">
+    <!-- Sidebar -->
+
+    <!-- Conteúdo Principal -->
+    <div style="
+          width: 100%;
+          padding: 30px;
+
+          display: flex;
+          flex-direction: column;
+        ">
+      <div>
+        <div class="text-center">
+          <h1 style="
+                color: var(--secondary-color-light);
+                font-size: 4.5rem;
+                font-weight: bolder;
+                border-bottom: 2px solid var(--primary-color-light);
+                padding-bottom: 20px;
+              ">
+            Referências
+          </h1>
+        </div>
+        <div id="glossario" class="glossario-class">
+          <div class="glossario-section" id="first-section">
+            <div class="glossario-header" onclick="toggleSection(this)">
+              <i class="fas fa-plus toggle-symbol"></i> Módulo 1
+            </div>
+            <ul class="glossario-content" style="list-style: none">
+              <li>
+                <div style="
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: left;
+                    ">
+                  <p></p>
+                  <p>
+                    BRASIL. Ministério da Saúde. <strong>Manual de Vigilância da Leishmaniose
+                      Tegumentar</strong>. Brasília: MS, 2017.
+                  </p>
+
+                  <p>BRASIL. Ministério da Saúde. <strong>Manual de Vigilância e Controle da
+                      Leishmaniose Visceral</strong>. Brasília: MS, 2014.</p>
+
+                  <p>BRASIL. Ministério da Saúde. <strong>Guia de Vigilância em Saúde: volume único</strong>.
+                    5. ed. Brasília: MS, 2021.</p>
+
+                  <p>LAINSON, R.; SHAW, J. J. Epidemiology and ecology of leishmaniasis in Latin
+                    America. <i>Nature</i>, v. 273, p. 595-600, 1978.</p>
+
+                  <p>RANGEL, E. F.; SHAW, J. J. <strong>Brazilian Sand Flies: Biology, Taxonomy,
+                      Medical Importance and Control</strong>. Springer, 2018.</p>
+
+                  <p>READY, P. D. Epidemiology of visceral leishmaniasis. <i>Clinical Epidemiology</i>, v.
+                    6, p. 147-154, 2014.</p>
+
+                  <p>WORLD HEALTH ORGANIZATION (WHO). <strong>Leishmaniasis. Epidemiology
+                      and control</strong>. Geneva: WHO, 2023.</p>
+
+                  <p>BRASIL. Ministério da Saúde. <strong>Manual de Vigilância da Leishmaniose
+                      Tegumentar</strong>. Brasília: MS, 2017.</p>
+
+                  <p>BRASIL. Ministério da Saúde. <strong>Manual de Vigilância e Controle da
+                      Leishmaniose Visceral</strong>. Brasília: MS, 2014.</p>
+
+                  <p>BRASIL. Ministério da Saúde. <strong>Guia de Vigilância em Saúde: volume único</strong>.
+                    5. ed. Brasília: MS, 2021.</p>
+
+                  <p>LAINSON, R.; SHAW, J. J. Epidemiology and ecology of leishmaniasis in Latin
+                    America. <i>Nature</i>, v. 273, p. 595-600, 1978.</p>
+
+                  <p>RANGEL, E. F.; SHAW, J. J. <strong>Brazilian Sand Flies: Biology, Taxonomy,
+                      Medical Importance and Control</strong>. Springer, 2018.</p>
+
+                  <p>READY, P. D. Epidemiology of visceral leishmaniasis. <i>Clinical Epidemiology</i>, v.
+                    6, p. 147-154, 2014.</p>
+
+                  <p>WORLD HEALTH ORGANIZATION (WHO). <strong>Leishmaniasis. Epidemiology
+                      and control</strong>. Geneva: WHO, 2023.</p>
+
+                  <p>BRASIL. Ministério da Saúde. <strong>Manual de Vigilância da Leishmaniose
+                      Tegumentar</strong>. Brasília: MS, 2017.</p>
+
+                  <p>BRASIL. Ministério da Saúde. <strong>Manual de Vigilância e Controle da
+                      Leishmaniose Visceral</strong>. Brasília: MS, 2014.</p>
+
+                  <p>BRASIL. Ministério da Saúde. <strong>Guia de Vigilância em Saúde: volume único</strong>.
+                    5. ed. Brasília: MS, 2021.</p>
+
+                  <p>LAINSON, R.; SHAW, J. J. Epidemiology and ecology of leishmaniasis in Latin
+                    America. <i>Nature</i>, v. 273, p. 595-600, 1978.</p>
+
+                  <p>RANGEL, E. F.; LAINSON, R. <strong>Flebotomíneos do Brasil</strong>. Rio de Janeiro:
+                    Fiocruz, 2003.</p>
+
+                  <p>RANGEL, E. F.; SHAW, J. J. <strong>Brazilian Sand Flies: Biology, Taxonomy,
+                      Medical Importance and Control</strong>. Springer, 2018.</p>
+
+                  <p>READY, P. D. Epidemiology of visceral leishmaniasis. <i>Clinical Epidemiology</i>, v.
+                    6, p. 147-154, 2014.</p>
+
+                  <p>WORLD HEALTH ORGANIZATION (WHO). <strong>Leishmaniasis. Epidemiology
+                      and control</strong>. Geneva: WHO, 2023.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="glossario-section">
+            <div class="glossario-header" onclick="toggleSection(this)">
+              <i class="fas fa-plus toggle-symbol"></i> Módulo 2
+            </div>
+            <ul class="glossario-content" style="list-style: square">
+              <li>
+                <div style="display: flex; flex-direction: column; width: 100%">
+                  <p></p>
+                  <p>
+                    Ayres, Eveline da Cruz Boa Sorte, et al. "Clinical and parasitological impact of short-
+                    term treatment using miltefosine and allopurinol monotherapy or combination therapy in
+                    canine visceral leishmaniasis."<i>Revista Brasileira de Parasitologia Veterinária</i> 31.3
+                    (2022): e007222.
+                  </p>
+
+                  <p>Brasil. Ministério da Saúde. Secretaria de Vigilância em Saúde. Departamento de
+                    Vigilância Epidemiológica. Manual de vigilância e controle da leishmaniose visceral /
+                    Ministério da Saúde, Secretaria de Vigilância em Saúde, Departamento de Vigilância
+                    Epidemiológica. – 1. ed., 5. reimpr. – Brasília: Ministério da Saúde, 2014. 120 p.: il.</p>
+
+                  <p>Brasil. Ministério da Saúde. Secretaria de Vigilância em Saúde. Departamento de
+                    Articulação Estratégica de Vigilância em Saúde. Guia de Vigilância em Saúde [recurso
+                    eletrônico] / Ministério da Saúde, Secretaria de Vigilância em Saúde. Departamento de
+                    Articulação Estratégica de Vigilância em Saúde. – 5. ed. rev. e atual. – Brasília:
+                    Ministério da Saúde, 2022. 1.126 p.: il.</p>
+
+                  <p>García-Castro, Ana, et al. &quot;Humoral and cellular immune response in asymptomatic
+                    dogs with visceral leishmaniasis: A review.&quot; <i>Vaccines</i> 10.6 (2022): 947.</p>
+
+                  <p>Figueiredo, Fabiano Borges, et al. &quot;Validation of the Dual-path Platform
+                    chromatographic immunoassay (DPP® CVL rapid test) for the serodiagnosis of canine
+                    visceral leishmaniasis.&quot; Memórias do Instituto Oswaldo Cruz 113 (2018): e180260.</p>
+
+                  <p>MINISTÉRIO DA AGRICULTURA, PECUÁRIA E ABASTECIMENTO COORDENAÇÃO
+                    DE FISCALIZAÇÃO DE PRODUTOS VETERINÁRIOS-DFIP-SDA - CPV Ministério da
+                    Agricultura, Pecuária e Abastecimento - Bairro Zona Cívico-Administrativa - DF, CEP
+                    70043900 Tel: 61 32182704 - http://www.agricultura.gov.br NOTA TÉCNICA Nº
+                    11/2016/CPV/DFIP/SDA/GM/MAPA</p>
+
+                  <p>Ministério da Saúde Secretaria de Vigilância em Saúde Departamento de Imunização
+                    e Doenças Transmissíveis Coordenação-Geral de Vigilância de Zoonoses e Doenças
+                    de Transmissão Vetorial. NOTA INFORMATIVA Nº 13/2020-CGZV/DEIDT/SVS/MS</p>
+
+                  <p>Morales-Yuste, Manuel, Joaquina Martín-Sánchez, and Victoriano Corpas-Lopez.
+                    &quot;Canine leishmaniasis: Update on epidemiology, diagnosis, treatment, and
+                    prevention.&quot; <i>Veterinary Sciences</i> 9.8 (2022): 387.</p>
+
+                  <p>Silva, Arianna Araujo Falcão Andrade E., et al. &quot;Programa de Vigilância e Controle da
+                    Leishmaniose Visceral: um estudo de avaliabilidade.&quot; Physis: Revista de Saúde
+                    Coletiva 34 (2024): e34026.</p>
+
+                  <p>Vaz, Talita Pereira, et al. &quot;Clinical and laboratory response of domiciled dogs with
+                    visceral leishmaniasis treated with miltefosine and allopurinol.&quot; <i>Tropical Medicine and
+                      Infectious Disease</i> 8.10 (2023): 472.</p>
+
+                  <p>Werneck, Guilherme Loureiro, Fabiano Borges Figueiredo, and Maria do Socorro Pires
+                    E. Cruz. &quot;Impact of 4% deltamethrin-impregnated dog collars on the incidence of
+                    human visceral leishmaniasis: A community intervention trial in Brazil.&quot; Pathogens 13.2
+                    (2024): 135.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="glossario-section">
+            <div class="glossario-header" onclick="toggleSection(this)">
+              <i class="fas fa-plus toggle-symbol"></i> Módulo 3
+            </div>
+            <ul class="glossario-content" style="list-style: square">
+              <li>
+                <div style="display: flex; flex-direction: column; width: 100%">
+                  <p></p>
+                  <p>
+                    Brasil. Ministério da Saúde. Secretaria de Vigilância em Saúde. Departamento
+                    de Vigilância Epidemiológica. Manual de vigilância e controle da leishmaniose
+                    visceral / Ministério da Saúde, Secretaria de Vigilância em Saúde,
+                    Departamento de Vigilância Epidemiológica. – 1. ed., 5. reimpr. – Brasília:
+                    Ministério da Saúde, 2014.
+                  </p>
+
+                  <p>Brasil. Ministério da Saúde. Secretaria de Vigilância em Saúde. Departamento
+                    de Vigilância das Doenças Transmissíveis. Manual de vigilância da
+                    leishmaniose tegumentar [recurso eletrônico] / Ministério da Saúde, Secretaria
+                    de Vigilância em Saúde, Departamento de Vigilância das Doenças
+                    Transmissíveis. – Brasília: Ministério da Saúde, 2017.</p>
+
+                  <p>Brasil. Ministério da Saúde. Secretaria de Vigilância em Saúde. Departamento
+                    de Articulação Estratégica de Vigilância em Saúde. Guia de Vigilância em
+                    Saúde [recurso eletrônico] / Ministério da Saúde, Secretaria de Vigilância em
+                    Saúde. Departamento de Articulação Estratégica de Vigilância em Saúde. – 5.
+                    ed. rev. – Brasília: Ministério da Saúde, 2022. 1.126 p. : il.</p>
+
+                  <p>Brasil. Conselho Federal de Medicina Veterinária - CFMV. Comissão Nacional
+                    de Saúde Pública Veterinária do Conselho Federal de Medina Veterinária. Guia
+                    de Bolso Leishmaniose Visceral, Comissão Nacional de Saúde Pública
+                    Veterinária – 1. ed., – Brasília - DF: CFMV, 2020 194 p.: il.</p>
+
+                  <p>Webinar Ministério da Saúde| Situação Epidemiológica, desafios e perspectivas
+                    da Vigilância da Leishmaniose Visceral no Brasil<br>
+
+                    <a href="https://www.youtube.com/watch?v=yP0esUTUrFE" target="_blank"
+                      rel="noopener noreferrer">https://www.youtube.com/watch?v=yP0esUTUrFE</a>
+                  </p>
+
+                  <p>Leishmaniose – Cuidado para o controle da leishmaniose visceral – Ministério
+                    da Saúde <br>
+                    <a href="https://www.youtube.com/watch?v=U-lSFd9d3Vw" target="_blank"
+                      rel="noopener noreferrer">https://www.youtube.com/watch?v=U-lSFd9d3Vw</a>
+                  </p>
+
+                  <p>Site do gov.br Leishmaniose Visceral <br>
+                    <a href="https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/l/leishmaniose-visceral"
+                      target="_blank"
+                      rel="noopener noreferrer">https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/l/leishmaniose-visceral</a>
+                  </p>
+
+                  <p>Site do gov.br Leishmaniose Tegumentar <br>
+                    <a href="http://" target="_blank"
+                      rel="noopener noreferrer">https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/l/lt</a>
+                  </p>
+
+                  <p>Notas técnicas e informativa para as Leishmanioses <br>
+                    <a href="https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/l/leishmaniose-
+visceral/notas-tecnicas-e-informativas" target="_blank"
+                      rel="noopener noreferrer">https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/l/leishmaniose-
+                      visceral/notas-tecnicas-e-informativas</a>
+
+                  <p>Publicações do Ministério da Saúde para as Leishmanioses <br>
+                    <a href="https://www.gov.br/saude/pt-br/centrais-de-
+conteudo/publicacoes/svsa/leishmaniose" target="_blank"
+                      rel="noopener noreferrer">https://www.gov.br/saude/pt-br/centrais-de-
+                      conteudo/publicacoes/svsa/leishmaniose</a>
+                  </p>
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="glossario-section" id="last-section">
+            <div class="glossario-header" onclick="toggleSection(this)">
+              <i class="fas fa-plus toggle-symbol"></i> Módulo 4
+            </div>
+            <ul class="glossario-content">
+              <li>
+                <div style="display: flex; flex-direction: column; width: 100%">
+                  <h1>Diagnóstico molecular</h1>
+                  <p>Detecta o DNA do parasito (ex: PCR).</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Botões de navegação -->
+    </div>
+    <!-- Rodapé -->
+  </div>
+  <!-- Arquivos JS -->
+  <div id="sidebar-toggle">
+    <div class="box">
+      <div class="btn not-active">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="../assets/js/video.js"></script>
+  <script type="text/javascript" src="../assets/js/toast.js"></script>
+  <script type="text/javascript" src="../assets/js/sidebar.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script>
+    function toggleSection(header) {
+      const content = header.nextElementSibling;
+      const symbol = header.querySelector(".toggle-symbol");
+
+      if (content.style.display === "none" || content.style.display === "") {
+        content.style.display = "flex";
+        symbol.classList.remove("fa-plus");
+        symbol.classList.add("fa-minus");
+      } else {
+        content.style.display = "none";
+        symbol.classList.remove("fa-minus");
+        symbol.classList.add("fa-plus");
+      }
+    }
+  </script>
+</body>
+
+</html>
