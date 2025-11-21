@@ -3,6 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <style>
+      #buttons-hover {
+        padding-top: 42rem;
+        @media (max-width: 980px) {
+          padding-top: 0;
+        }
+      }
       html,
       body {
         margin: 0;
@@ -91,23 +97,14 @@
     </style>
     <title>Leishmanioses</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="../assets/js/link.js"></script>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
-    />
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/toastify-js"
-    ></script>
+    <script src="./assets/js/link.js"></script>
     <link
       rel="icon"
       type="image/x-icon"
-      href="../assets/images/home/IconSite.png"
+      href="./assets/images/home/IconSite.png"
     />
 
-    <link href="../assets/css/normalize.css" rel="stylesheet" />
+    <link href="./assets/css/normalize.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -120,17 +117,14 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
     />
-    <link href="../assets/css/styles.css" rel="stylesheet" />
-    <link href="../assets/css/utilities/fonts.css" rel="stylesheet" />
-    <link href="../assets/css/css/fonts.css" rel="stylesheet" />
-    <link href="../assets/css/css/header.css" rel="stylesheet" />
-    <link href="../assets/css/css/sidebar.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../assets/css/css copy/animate.min.css" />
-    <link
-      rel="stylesheet"
-      href="../assets/css/css/recursos-visuais/boxes.css"
-    />
-    <link rel="stylesheet" href="../assets/css/css copy/colors.css" />
+    <link href="./assets/css/styles.css" rel="stylesheet" />
+    <link href="./assets/css/utilities/fonts.css" rel="stylesheet" />
+    <link href="./assets/css/css/fonts.css" rel="stylesheet" />
+    <link href="./assets/css/css/header.css" rel="stylesheet" />
+    <link href="./assets/css/css/sidebar.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/css copy/animate.min.css" />
+    <link rel="stylesheet" href="./assets/css/css/recursos-visuais/boxes.css" />
+    <link rel="stylesheet" href="./assets/css/css copy/colors.css" />
   </head>
 
   <body>
@@ -143,7 +137,7 @@
           <section class="sidebar__header">
             <section class="sidebar__section py-0">
               <img
-                src="../assets/images/logos/LOGO 4 (300 x 130 px).png"
+                src="./assets/images/logos/LOGO 4 (300 x 130 px).png"
                 alt="Campus Virtual Fiocruz"
                 width="100%"
               />
@@ -156,80 +150,17 @@
           </section>
           <hr />
           <section class="sidebar__section py-2">
-            <a
-              href="../index.html"
-              class="sidebar__btn"
-              tabindex="0"
-              role="link"
-            >
+            <a href="index.html" class="sidebar__btn" tabindex="0" role="link">
               <span class="material-symbols-rounded" aria-hidden="true"
                 >home</span
               >Página inicial
             </a>
           </section>
-          <nav class="sidebar__section sidebar__section--contrast pb-0">
-            <span class="h6 pre-title">Aulas do módulo 4:</span>
-            <div class="sidebar__topic-list pb-4">
-              <a
-                href="./modulo4-aula1.html"
-                tabindex="0"
-                role="link"
-                class="sidebar__btn sidebar__list-item"
-                ><span
-                  class="material-symbols-rounded"
-                  aria-label="Tópico não concluído"
-                  status="completed"
-                ></span>
-                Ações de controle da leishmaniose no Brasil segundo o Ministério
-                da Saúde
-              </a>
-
-              <a
-                href="modulo4-aula2.html"
-                tabindex="0"
-                role="link"
-                class="sidebar__btn sidebar__list-item"
-                ><span
-                  class="material-symbols-rounded"
-                  aria-label="Tópico não concluído"
-                  status="completed"
-                ></span
-                >Abordagens de diagnóstico e tratamento</a
-              >
-
-              <a
-                href="modulo4-aula3.html"
-                tabindex="0"
-                role="link"
-                class="sidebar__btn sidebar__list-item"
-                ><span
-                  class="material-symbols-rounded"
-                  aria-label="Tópico não concluído"
-                  status="selected"
-                ></span>
-                Saúde Única, Leishmanioses e a Interdisciplinaridade</a
-              >
-
-              <a
-                href="modulo4-quiz.html"
-                tabindex="0"
-                role="link"
-                class="sidebar__btn sidebar__list-item"
-                ><span
-                  class="material-symbols-rounded"
-                  aria-label="Tópico não concluído"
-                  status=""
-                >
-                </span>
-                Quiz</a
-              >
-            </div>
-          </nav>
 
           <section class="sidebar__section classes">
-            <span class="h6 pre-title">Outros Módulos:</span>
+            <span class="h6 pre-title">Todos os módulos:</span>
             <a
-              href="../modulo1/modulo1-aula1.html"
+              href="./modulo1/modulo1-aula1.html"
               tabindex="0"
               role="link"
               class="sidebar__btn"
@@ -238,7 +169,7 @@
             >
             <!-- <a href="../modulo2/introducao.html" tabindex="0" role="link" class="sidebar__btn"> 2. Manifestações clínicas, diagnóstico e tratamento</a> -->
             <a
-              href="../modulo2/modulo2-aula1.html"
+              href="./modulo2/modulo2-aula1.html"
               tabindex="0"
               role="link"
               class="sidebar__btn"
@@ -246,13 +177,22 @@
               2. Patogênese e Manifestações Clínicas</a
             >
             <a
-              href="../modulo3/modulo3-aula1.html"
+              href="./modulo3/modulo3-aula1.html"
               tabindex="0"
               role="link"
               class="sidebar__btn"
             >
               3. Fatores físicos e sociais que contribuem para a manutenção e
               dispersão da doenças</a
+            >
+            <a
+              href="./modulo4/modulo4-aula1.html"
+              tabindex="0"
+              role="link"
+              class="sidebar__btn"
+            >
+              4. Estratégias para o controle das leishmanioses: diagnóstico,
+              tratamento e Saúde Única</a
             >
           </section>
           <hr />
@@ -277,7 +217,7 @@
           </section>
           <section class="sidebar__section py-2">
             <a
-              href="../material-complementar.html"
+              href="material-complementar.html"
               class="sidebar__btn"
               tabindex="0"
               role="link"
@@ -288,22 +228,7 @@
               Apostila</a
             >
           </section>
-        <section class="sidebar__section py-2">
-          <a class="sidebar__btn" role="link" id="openReferencias">
-            <span class="material-symbols-rounded">description</span> Referências</a>
-          <dialog id="dialogReferencias">
-            <div id="dialogReferenciasContent">Carregando...</div>
-            <div style="
-                  display: flex;
-                  justify-content: flex-end;
-                  align-items: center;
-                  margin-top: 10px;
-                ">
-              <button class="closeDialog">Fechar</button>
-            </div>
-          </dialog>
-        </section>
-        <section class="sidebar__section py-2">
+          <section class="sidebar__section py-2">
             <a class="sidebar__btn" role="link" id="openCreditos"
               ><span class="material-symbols-rounded">
                 format_list_bulleted</span
@@ -323,7 +248,20 @@
                 <button class="closeDialog">Fechar</button>
               </div>
             </dialog>
-        </section>
+          </section>
+          <section class="sidebar__section py-2">
+            <a
+              href="encerramento.html"
+              class="sidebar__btn"
+              tabindex="0"
+              role="link"
+              data-bs-toggle="modal"
+              data-bs-target="#modal-material-complementar"
+            >
+              <span class="material-symbols-rounded">exit_to_app</span>
+              Encerramento</a
+            >
+          </section>
           <section class="sidebar__section py-2">
             <a
               class="sidebar__btn"
@@ -331,13 +269,12 @@
               role="link"
               data-bs-toggle="modal"
               data-bs-target="#modal-material-complementar"
-              onclick="mostrarToast(event)"
+              href=""
             >
-              <span class="material-symbols-rounded">exit_to_app</span>
-              Encerramento</a
+              <span class="material-symbols-rounded">quiz</span>
+              Quiz Final</a
             >
           </section>
-
         </div>
       </div>
 
@@ -347,16 +284,12 @@
           <div class="header__inner">
             <div class="header__title">
               <div class="container">
-                <div>
+                <div class="row">
                   <div
                     class="col-12 col-md-10 col-lg-11 animate__animated animate__fadeIn"
                     style="animation-delay: 0.5s"
                   >
-                    <h2>
-                      <span class="h4">Módulo 4</span>
-                      Estratégias para o controle das leishmanioses:
-                      diagnóstico, tratamento e Saúde Única
-                    </h2>
+                    <h2 style="font-size: 4rem; color: white">Quiz Final</h2>
                   </div>
                 </div>
               </div>
@@ -364,179 +297,77 @@
           </div>
         </header>
         <div class="conteudo">
-          <p class="indice">Aula 3</p>
-          <h1 style="padding-top: 15px; font-size: 3rem; color: #05314a">
-            Saúde Única, Leishmanioses e a Interdisciplinaridade
-          </h1>
-
-          <hr
-            style="
-              display: block;
-              width: 40px;
-              height: 3px;
-              background: #ff7000;
-              border: none;
-              margin: 0;
-              border-radius: 10px;
-              margin-bottom: 30px;
-            "
-          />
-          <p>
-            O controle das leishmanioses não depende apenas das ações técnicas
-            dos profissionais de saúde, mas também do engajamento da população.
-            Nesta aula, vamos refletir sobre o papel da participação cidadã na
-            prevenção e no enfrentamento das leishmanioses, destacando atitudes
-            individuais e coletivas que fazem diferença: desde o cuidado com o
-            ambiente até a colaboração com medidas de vigilância e controle.
-            Entender o impacto da mobilização social e da educação em saúde é
-            fundamental para promover respostas sustentáveis e eficazes contra a
-            doença.
-          </p>
-          <div
-            class="col-11 col-md-10 col-lg-8"
-            style="
-              max-width: 100%;
-              margin-top: 30px;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-            "
-          >
-            <a class="button-video" onclick="openVideo()">
-              <span
-                class="material-symbols-rounded"
-                style="transform: rotateX(180deg)"
-                >touch_app</span
-              >&nbsp Fechar vídeo e voltar ao conteúdo
-            </a>
+          <div style="width: 100%; padding-top: 3rem">
+            <div style="width: 100%">
+              <div
+                style="
+                  position: relative;
+                  padding-bottom: 56.25%;
+                  padding-top: 0;
+                  height: 0;
+                "
+              >
+                <iframe
+                  title="Final"
+                  frameborder="0"
+                  width="1200"
+                  height="675"
+                  style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                  "
+                  src="https://view.genially.com/67ef32c092f367939cd55a47"
+                  type="text/html"
+                  allowscriptaccess="always"
+                  allowfullscreen="true"
+                  scrolling="yes"
+                  allownetworking="all"
+                ></iframe>
+              </div>
+            </div>
           </div>
-          <div class="div-video">
-            <iframe
-              src="https://educare.fiocruz.br/file-storage/V0TB-D7I"
-              controls
-              allowfullscreen
-              class="iframe-video"
-            ></iframe>
-          </div>
-          <div id="margin-video" style="margin-bottom: 30px"></div>
-          <hr
-            style="
-              display: block;
-              width: 40px;
-              height: 3px;
-              background: #c40f17;
-              border: none;
-              margin: 0;
-              border-radius: 10px;
-              margin-bottom: 30px;
-            "
-          />
-          <p>
-            Encerramos este último módulo com a proposta de olhar para a
-            leishmaniose como mais do que uma doença infecciosa: ela é um
-            reflexo das interações entre ambientes degradados, desigualdades
-            sociais e lacunas nas políticas públicas. Neste módulo, avançamos do
-            conhecimento técnico para a articulação entre ciência, saúde
-            coletiva e ética — refletindo sobre o papel de cada um de nós na
-            construção de respostas mais integradas e sustentáveis.
-          </p>
-          <p>
-            Discutimos estratégias de controle, os desafios no diagnóstico e
-            tratamento, e culminamos com a abordagem de Saúde Única, que nos
-            convida a pensar de forma ampla e colaborativa. Entendemos que a
-            saúde não se faz apenas com medicamentos ou diagnósticos precisos,
-            mas com ações que considerem os territórios, os saberes diversos, a
-            interdependência entre espécies e a justiça social.
-          </p>
-          <p>
-            Este encerramento marca não apenas o fim de um módulo, mas a
-            consolidação de uma jornada de aprendizagem crítica e
-            transformadora. Esperamos que você leve consigo não só o
-            conhecimento adquirido, mas também o compromisso de aplicá-lo com
-            sensibilidade, rigor científico e consciência social.
-          </p>
-          <p>
-            As leishmanioses ainda representam um grande desafio — e é por isso
-            que formar profissionais preparados, informados e engajados é uma
-            das estratégias mais poderosas para enfrentá-las.
-          </p>
-          <hr
-            style="
-              display: block;
-              width: 40px;
-              height: 3px;
-              background: #c40f17;
-              border: none;
-              margin: 0;
-              border-radius: 10px;
-              margin-bottom: 30px;
-            "
-          />
         </div>
 
-        <!-- Botões de navegação -->
-        <div class="row botao" style="display: flex" id="buttons-hover">
-          <a
-            href="../mapas/modulo4/a3.html"
-            class="btn btn-sm"
-            id="botaoVoltar"
-            role="button"
-            alt="Voltar"
-            style="border: none; color: white; background-color: #f77f00"
-          >
-            <strong>Mapa Mental</strong></a
-          >
-          <a
-            href="../paginaTextoApio/textoApoio.html?modulo=4&aula=3"
-            class="btn btn-sm"
-            id="botaoAvancar"
-            role="button"
-            alt="Avancar"
+        <div class="row botao" id="buttons-hover">
+          <hr
             style="
-              margin-right: 30px;
-              background-color: white;
-              color: #f77f00;
-              border: 1px solid #f77f00;
+              display: block;
+              width: 100%;
+              height: 2px;
+              background: linear-gradient(
+                95deg,
+                rgba(255, 255, 255, 1) 0%,
+                rgba(247, 127, 0, 1) 50%,
+                rgba(255, 255, 255, 1) 100%
+              );
+              border: none;
+              opacity: 0.7;
+              margin: 0;
+              border-radius: 10px;
+              margin-bottom: 30px;
             "
-          >
-            <strong>Texto de Apoio</strong></a
-          >
-        </div>
-
-        <div
-          class="row botao"
-          style="
-            border-top: 2px solid transparent;
-            border-image: linear-gradient(
-              95deg,
-              rgba(255, 255, 255, 1) 0%,
-              rgba(247, 127, 0, 1) 50%,
-              rgba(255, 255, 255, 1) 100%
-            );
-            border-image-slice: 1;
-            border-radius: 15px;
-          "
-        >
+          />
           <a
-            href="modulo4-aula2.html"
+            href="./modulo4/modulo4-quiz.html"
             class="btn btn-sm"
             id="botaoVoltar"
             role="button"
             alt="Voltar"
           >
-            <strong
-              ><i class="fas fa-chevron-left"></i>Módulo 4 Aula 2</strong
-            ></a
+            <strong><i class="fas fa-chevron-left"></i>Quiz Módulo 4</strong></a
           >
           <a
-            href="modulo4-quiz.html"
+            href="encerramento.html"
             class="btn btn-sm"
             id="botaoAvancar"
             role="button"
             style="margin-right: 30px"
             alt="Avançar"
           >
-            <strong>Quiz Módulo 4<i class="fas fa-chevron-right"></i></strong
+            <strong>Encerramento<i class="fas fa-chevron-right"></i></strong
           ></a>
         </div>
 
@@ -546,7 +377,7 @@
             <div class="col-md-12 centro">
               <img
                 class="img-fluid centro"
-                src="../assets/images/rodape/rodape.png"
+                src="./assets/images/rodape/rodape.png"
                 alt="Rodapé"
               />
             </div>
@@ -565,9 +396,8 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="../assets/js/video.js"></script>
-    <script type="text/javascript" src="../assets/js/toast.js"></script>
-    <script type="text/javascript" src="../assets/js/sidebar.js"></script>
+    <script type="text/javascript" src="assets/js/video.js"></script>
+    <script type="text/javascript" src="assets/js/sidebar.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
@@ -616,24 +446,18 @@
           }
         }
 
-        // Configura os diálogos
+        // Configura os dois diálogos
         configurarDialog(
           "openCreditos",
           "dialogCreditos",
           "dialogCreditosContent",
-          "../creditos.html"
+          "creditos.html"
         );
         configurarDialog(
           "openGlossario",
           "dialogGlossario",
           "dialogGlossarioContent",
-          "../glossario.html"
-        );
-        configurarDialog(
-          "openReferencias",
-          "dialogReferencias",
-          "dialogReferenciasContent",
-          "../referencias.html"
+          "glossario.html"
         );
       });
     </script>

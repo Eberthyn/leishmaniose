@@ -246,7 +246,6 @@
                 ></span
                 >Ciclo do flebotomíneo</a
               >
-
               <a
                 href="modulo1-quiz.html"
                 tabindex="0"
@@ -297,7 +296,7 @@
 
           <section class="sidebar__section py-2">
             <a class="sidebar__btn" role="link" id="openGlossario">
-              <span class="material-symbols-rounded">book</span> Glossario</a
+              <span class="material-symbols-rounded">book</span> Glossário</a
             >
             <dialog id="dialogGlossario">
               <div id="dialogGlossarioContent">Carregando...</div>
@@ -375,19 +374,7 @@
               Encerramento</a
             >
           </section>
-          <section class="sidebar__section py-2">
-            <a
-              class="sidebar__btn"
-              tabindex="0"
-              role="link"
-              data-bs-toggle="modal"
-              data-bs-target="#modal-material-complementar"
-              onclick="mostrarToast(event)"
-            >
-              <span class="material-symbols-rounded">quiz</span>
-              Quiz Final</a
-            >
-          </section>
+
         </div>
       </div>
 
@@ -509,13 +496,17 @@
             </a>
           </div>
           <div class="div-video">
-            <iframe
+            <video controls class="iframe-video" poster="../assets/images/icones/capaVideo.png">
+              <source src="https://educare.fiocruz.br/file-storage/JRYKPnEh" type="video/mp4" allowfullscreen="allowfullscreen">
+            </video>
+            <!-- <iframe
               src="https://educare.fiocruz.br/file-storage/JRYKPnEh"
               controls
               allowfullscreen
               class="iframe-video"
-            ></iframe>
+            ></iframe> -->
           </div>
+
           <div id="margin-video"></div>
           <hr
             style="
@@ -661,7 +652,7 @@
             <div class="col-md-12 centro">
               <img
                 class="img-fluid centro"
-                src="../assets/images/rodape/RÉGUA LOGO.png"
+                src="../assets/images/rodape/rodape.png"
                 alt="Rodapé"
               />
             </div>

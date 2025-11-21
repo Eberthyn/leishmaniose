@@ -174,11 +174,6 @@
             <a href="modulo3-aula4.html" tabindex="0" role="link" class="sidebar__btn sidebar__list-item"><span
                 class="material-symbols-rounded" aria-label="Tópico não concluído" status=""></span>Medidas de controle
               e prevenção das leishmanioses</a>
-
-            <a href="modulo3-quiz.html" tabindex="0" role="link" class="sidebar__btn sidebar__list-item"><span
-                class="material-symbols-rounded" aria-label="Tópico não concluído" status="">
-              </span>
-              Quiz</a>
           </div>
         </nav>
 
@@ -197,7 +192,7 @@
 
         <section class="sidebar__section py-2">
           <a class="sidebar__btn" role="link" id="openGlossario">
-            <span class="material-symbols-rounded">book</span> Glossario</a>
+            <span class="material-symbols-rounded">book</span> Glossário</a>
           <dialog id="dialogGlossario">
             <div id="dialogGlossarioContent">Carregando...</div>
             <div style="
@@ -215,6 +210,21 @@
             data-bs-target="#modal-material-complementar">
             <span class="material-symbols-rounded">library_books</span>
             Apostila</a>
+        </section>
+        <section class="sidebar__section py-2">
+          <a class="sidebar__btn" role="link" id="openReferencias">
+            <span class="material-symbols-rounded">description</span> Referências</a>
+          <dialog id="dialogReferencias">
+            <div id="dialogReferenciasContent">Carregando...</div>
+            <div style="
+                  display: flex;
+                  justify-content: flex-end;
+                  align-items: center;
+                  margin-top: 10px;
+                ">
+              <button class="closeDialog">Fechar</button>
+            </div>
+          </dialog>
         </section>
         <section class="sidebar__section py-2">
           <a class="sidebar__btn" role="link" id="openCreditos"><span class="material-symbols-rounded">
@@ -237,12 +247,6 @@
             data-bs-target="#modal-material-complementar" onclick="mostrarToast(event)">
             <span class="material-symbols-rounded">exit_to_app</span>
             Encerramento</a>
-        </section>
-        <section class="sidebar__section py-2">
-          <a class="sidebar__btn" tabindex="0" role="link" data-bs-toggle="modal"
-            data-bs-target="#modal-material-complementar" onclick="mostrarToast(event)">
-            <span class="material-symbols-rounded">quiz</span>
-            Quiz Final</a>
         </section>
       </div>
     </div>
@@ -727,7 +731,7 @@
       <footer>
         <div class="row-main">
           <div class="col-md-12 centro">
-            <img class="img-fluid centro" src="../assets/images/rodape/RÉGUA LOGO.png" alt="Rodapé" />
+            <img class="img-fluid centro" src="../assets/images/rodape/rodape.png" alt="Rodapé" />
           </div>
         </div>
       </footer>
@@ -807,6 +811,12 @@
         "dialogGlossario",
         "dialogGlossarioContent",
         "../glossario.html"
+      );
+      configurarDialog(
+        "openReferencias",
+        "dialogReferencias",
+        "dialogReferenciasContent",
+        "../referencias.html"
       );
     });
   </script>

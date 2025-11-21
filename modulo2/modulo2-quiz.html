@@ -324,7 +324,7 @@
 
           <section class="sidebar__section py-2">
             <a class="sidebar__btn" role="link" id="openGlossario">
-              <span class="material-symbols-rounded">book</span> Glossario</a
+              <span class="material-symbols-rounded">book</span> Glossário</a
             >
             <dialog id="dialogGlossario">
               <div id="dialogGlossarioContent">Carregando...</div>
@@ -353,22 +353,7 @@
               Apostila</a
             >
           </section>
-        <section class="sidebar__section py-2">
-          <a class="sidebar__btn" role="link" id="openReferencias">
-            <span class="material-symbols-rounded">description</span> Referências</a>
-          <dialog id="dialogReferencias">
-            <div id="dialogReferenciasContent">Carregando...</div>
-            <div style="
-                  display: flex;
-                  justify-content: flex-end;
-                  align-items: center;
-                  margin-top: 10px;
-                ">
-              <button class="closeDialog">Fechar</button>
-            </div>
-          </dialog>
-        </section>
-        <section class="sidebar__section py-2">
+          <section class="sidebar__section py-2">
             <a class="sidebar__btn" role="link" id="openCreditos"
               ><span class="material-symbols-rounded">
                 format_list_bulleted</span
@@ -388,7 +373,7 @@
                 <button class="closeDialog">Fechar</button>
               </div>
             </dialog>
-        </section>
+          </section>
           <section class="sidebar__section py-2">
             <a
               class="sidebar__btn"
@@ -537,7 +522,7 @@
             <div class="col-md-12 centro">
               <img
                 class="img-fluid centro"
-                src="../assets/images/rodape/RÉGUA LOGO.png"
+                src="../assets/images/rodape/rodape.png"
                 alt="Rodapé"
               />
             </div>
@@ -607,7 +592,7 @@
           }
         }
 
-        // Configura os diálogos
+        // Configura os dois diálogos
         configurarDialog(
           "openCreditos",
           "dialogCreditos",
@@ -619,12 +604,6 @@
           "dialogGlossario",
           "dialogGlossarioContent",
           "../glossario.html"
-        );
-        configurarDialog(
-          "openReferencias",
-          "dialogReferencias",
-          "dialogReferenciasContent",
-          "../referencias.html"
         );
       });
     </script>

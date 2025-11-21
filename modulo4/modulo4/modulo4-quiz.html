@@ -3,6 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <style>
+      #buttons-hover {
+        padding-top: 42rem;
+        @media (max-width: 980px) {
+          padding-top: 0;
+        }
+      }
       html,
       body {
         margin: 0;
@@ -150,8 +156,7 @@
             </section>
             <h1>
               leishmanioses:
-              <hr style="border: none" />
-              e eu com isso?
+              <span>e eu com isso?</span>
             </h1>
           </section>
           <hr />
@@ -205,7 +210,7 @@
                 ><span
                   class="material-symbols-rounded"
                   aria-label="Tópico não concluído"
-                  status="selected"
+                  status="completed"
                 ></span>
                 Saúde Única, Leishmanioses e a Interdisciplinaridade</a
               >
@@ -218,7 +223,7 @@
                 ><span
                   class="material-symbols-rounded"
                   aria-label="Tópico não concluído"
-                  status=""
+                  status="selected"
                 >
                 </span>
                 Quiz</a
@@ -288,22 +293,7 @@
               Apostila</a
             >
           </section>
-        <section class="sidebar__section py-2">
-          <a class="sidebar__btn" role="link" id="openReferencias">
-            <span class="material-symbols-rounded">description</span> Referências</a>
-          <dialog id="dialogReferencias">
-            <div id="dialogReferenciasContent">Carregando...</div>
-            <div style="
-                  display: flex;
-                  justify-content: flex-end;
-                  align-items: center;
-                  margin-top: 10px;
-                ">
-              <button class="closeDialog">Fechar</button>
-            </div>
-          </dialog>
-        </section>
-        <section class="sidebar__section py-2">
+          <section class="sidebar__section py-2">
             <a class="sidebar__btn" role="link" id="openCreditos"
               ><span class="material-symbols-rounded">
                 format_list_bulleted</span
@@ -323,7 +313,7 @@
                 <button class="closeDialog">Fechar</button>
               </div>
             </dialog>
-        </section>
+          </section>
           <section class="sidebar__section py-2">
             <a
               class="sidebar__btn"
@@ -337,7 +327,19 @@
               Encerramento</a
             >
           </section>
-
+          <section class="sidebar__section py-2">
+            <a
+              class="sidebar__btn"
+              tabindex="0"
+              role="link"
+              data-bs-toggle="modal"
+              data-bs-target="#modal-material-complementar"
+              onclick="mostrarToast(event)"
+            >
+              <span class="material-symbols-rounded">quiz</span>
+              Quiz Final</a
+            >
+          </section>
         </div>
       </div>
 
@@ -364,9 +366,8 @@
           </div>
         </header>
         <div class="conteudo">
-          <p class="indice">Aula 3</p>
           <h1 style="padding-top: 15px; font-size: 3rem; color: #05314a">
-            Saúde Única, Leishmanioses e a Interdisciplinaridade
+            Quiz Módulo 4
           </h1>
 
           <hr
@@ -381,162 +382,77 @@
               margin-bottom: 30px;
             "
           />
-          <p>
-            O controle das leishmanioses não depende apenas das ações técnicas
-            dos profissionais de saúde, mas também do engajamento da população.
-            Nesta aula, vamos refletir sobre o papel da participação cidadã na
-            prevenção e no enfrentamento das leishmanioses, destacando atitudes
-            individuais e coletivas que fazem diferença: desde o cuidado com o
-            ambiente até a colaboração com medidas de vigilância e controle.
-            Entender o impacto da mobilização social e da educação em saúde é
-            fundamental para promover respostas sustentáveis e eficazes contra a
-            doença.
-          </p>
-          <div
-            class="col-11 col-md-10 col-lg-8"
-            style="
-              max-width: 100%;
-              margin-top: 30px;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-            "
-          >
-            <a class="button-video" onclick="openVideo()">
-              <span
-                class="material-symbols-rounded"
-                style="transform: rotateX(180deg)"
-                >touch_app</span
-              >&nbsp Fechar vídeo e voltar ao conteúdo
-            </a>
+          <div style="width: 100%">
+            <div
+              style="
+                position: relative;
+                padding-bottom: 56.25%;
+                padding-top: 0;
+                height: 0;
+              "
+            >
+              <iframe
+                title="Módulo 4"
+                frameborder="0"
+                width="1200"
+                height="675"
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                "
+                src="https://view.genially.com/67ef301892f367939cd25f23"
+                type="text/html"
+                allowscriptaccess="always"
+                allowfullscreen="true"
+                scrolling="yes"
+                allownetworking="all"
+              ></iframe>
+            </div>
           </div>
-          <div class="div-video">
-            <iframe
-              src="https://educare.fiocruz.br/file-storage/V0TB-D7I"
-              controls
-              allowfullscreen
-              class="iframe-video"
-            ></iframe>
-          </div>
-          <div id="margin-video" style="margin-bottom: 30px"></div>
+        </div>
+
+        <div class="row botao" id="buttons-hover">
           <hr
             style="
               display: block;
-              width: 40px;
-              height: 3px;
-              background: #c40f17;
+              width: 100%;
+              height: 2px;
+              background: linear-gradient(
+                95deg,
+                rgba(255, 255, 255, 1) 0%,
+                rgba(247, 127, 0, 1) 50%,
+                rgba(255, 255, 255, 1) 100%
+              );
               border: none;
+              opacity: 0.7;
               margin: 0;
               border-radius: 10px;
               margin-bottom: 30px;
             "
           />
-          <p>
-            Encerramos este último módulo com a proposta de olhar para a
-            leishmaniose como mais do que uma doença infecciosa: ela é um
-            reflexo das interações entre ambientes degradados, desigualdades
-            sociais e lacunas nas políticas públicas. Neste módulo, avançamos do
-            conhecimento técnico para a articulação entre ciência, saúde
-            coletiva e ética — refletindo sobre o papel de cada um de nós na
-            construção de respostas mais integradas e sustentáveis.
-          </p>
-          <p>
-            Discutimos estratégias de controle, os desafios no diagnóstico e
-            tratamento, e culminamos com a abordagem de Saúde Única, que nos
-            convida a pensar de forma ampla e colaborativa. Entendemos que a
-            saúde não se faz apenas com medicamentos ou diagnósticos precisos,
-            mas com ações que considerem os territórios, os saberes diversos, a
-            interdependência entre espécies e a justiça social.
-          </p>
-          <p>
-            Este encerramento marca não apenas o fim de um módulo, mas a
-            consolidação de uma jornada de aprendizagem crítica e
-            transformadora. Esperamos que você leve consigo não só o
-            conhecimento adquirido, mas também o compromisso de aplicá-lo com
-            sensibilidade, rigor científico e consciência social.
-          </p>
-          <p>
-            As leishmanioses ainda representam um grande desafio — e é por isso
-            que formar profissionais preparados, informados e engajados é uma
-            das estratégias mais poderosas para enfrentá-las.
-          </p>
-          <hr
-            style="
-              display: block;
-              width: 40px;
-              height: 3px;
-              background: #c40f17;
-              border: none;
-              margin: 0;
-              border-radius: 10px;
-              margin-bottom: 30px;
-            "
-          />
-        </div>
-
-        <!-- Botões de navegação -->
-        <div class="row botao" style="display: flex" id="buttons-hover">
           <a
-            href="../mapas/modulo4/a3.html"
-            class="btn btn-sm"
-            id="botaoVoltar"
-            role="button"
-            alt="Voltar"
-            style="border: none; color: white; background-color: #f77f00"
-          >
-            <strong>Mapa Mental</strong></a
-          >
-          <a
-            href="../paginaTextoApio/textoApoio.html?modulo=4&aula=3"
-            class="btn btn-sm"
-            id="botaoAvancar"
-            role="button"
-            alt="Avancar"
-            style="
-              margin-right: 30px;
-              background-color: white;
-              color: #f77f00;
-              border: 1px solid #f77f00;
-            "
-          >
-            <strong>Texto de Apoio</strong></a
-          >
-        </div>
-
-        <div
-          class="row botao"
-          style="
-            border-top: 2px solid transparent;
-            border-image: linear-gradient(
-              95deg,
-              rgba(255, 255, 255, 1) 0%,
-              rgba(247, 127, 0, 1) 50%,
-              rgba(255, 255, 255, 1) 100%
-            );
-            border-image-slice: 1;
-            border-radius: 15px;
-          "
-        >
-          <a
-            href="modulo4-aula2.html"
+            href="modulo4-aula3.html"
             class="btn btn-sm"
             id="botaoVoltar"
             role="button"
             alt="Voltar"
           >
             <strong
-              ><i class="fas fa-chevron-left"></i>Módulo 4 Aula 2</strong
+              ><i class="fas fa-chevron-left"></i>Módulo 4 Aula 3</strong
             ></a
           >
           <a
-            href="modulo4-quiz.html"
+            href="../quiz.html"
             class="btn btn-sm"
             id="botaoAvancar"
             role="button"
             style="margin-right: 30px"
             alt="Avançar"
           >
-            <strong>Quiz Módulo 4<i class="fas fa-chevron-right"></i></strong
+            <strong>Quiz Final<i class="fas fa-chevron-right"></i></strong
           ></a>
         </div>
 
@@ -616,7 +532,7 @@
           }
         }
 
-        // Configura os diálogos
+        // Configura os dois diálogos
         configurarDialog(
           "openCreditos",
           "dialogCreditos",
@@ -628,12 +544,6 @@
           "dialogGlossario",
           "dialogGlossarioContent",
           "../glossario.html"
-        );
-        configurarDialog(
-          "openReferencias",
-          "dialogReferencias",
-          "dialogReferenciasContent",
-          "../referencias.html"
         );
       });
     </script>
