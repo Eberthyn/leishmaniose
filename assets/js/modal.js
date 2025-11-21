@@ -48,12 +48,12 @@ configurarDialog(
   "dialogCreditosContent",
   "creditos.html"
 );
-configurarDialog(
-  "openReferencias",
-  "dialogReferencias",
-  "dialogReferenciasContent",
-  "referencias.html"
-);
+// configurarDialog(
+//   "openReferencias",
+//   "dialogReferencias",
+//   "dialogReferenciasContent",
+//   "referencias.html"
+// );
 
 function toggleSection(header) {
   const content = header.nextElementSibling;

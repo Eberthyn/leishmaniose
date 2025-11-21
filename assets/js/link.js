@@ -40,10 +40,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Últimas aulas de cada módulo, conforme sua descrição
   const ultimaAulaPorModulo = {
-    1: 9, // Módulo 1: Última aula é a 9
+    1: 6, // Módulo 1: Última aula é a 6
     2: 8, // Módulo 2: Última aula é a 8
-    3: 6, // Módulo 3: Última aula é a 6
-    4: 4, // Módulo 4: Última aula é a 4
+    3: 4, // Módulo 3: Última aula é a 4
+    4: 3, // Módulo 4: Última aula é a 3
   };
 
   // Obtenha o módulo atual e a aula atual

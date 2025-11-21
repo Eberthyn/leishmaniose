@@ -15,9 +15,9 @@
   }
 }
 .button-primary:hover {
-  background-color: var(--secondary-color-light);
-  color: #ffffff;
-  border: none;
+  background-color: #ffffff;
+  color: #05314a !important;
+  border: 1px solid #05314a;
   text-decoration: none;
   transition: background-color 0.5s ease;
 }

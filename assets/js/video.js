@@ -6,14 +6,14 @@ const videoDiv2 = document.querySelector(".div-video2");
 const marginVideo2 = document.getElementById("margin-video2");
 const buttonVideo2 = document.querySelector(".button-video2"); // Seletor do segundo <a> que serve como botão
 
-window.onload = function () {
-  [videoDiv, videoDiv2].forEach((div) => {
-    div.style.display = "block";
-    div.style.opacity = "1";
-  });
-  marginVideo.style.marginTop = "0px";
-  marginVideo2.style.marginTop = "0px";
-};
+// window.onload = function () {
+//   [videoDiv, videoDiv2].forEach((div) => {
+//     div.style.display = "block";
+//     div.style.opacity = "1";
+//   });
+//   marginVideo.style.marginTop = "0px";
+//   marginVideo2.style.marginTop = "0px";
+// };
 
 function toggleVideo(videoElement, marginElement, buttonElement) {
   const isHidden =

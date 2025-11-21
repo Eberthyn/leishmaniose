@@ -30,14 +30,14 @@
 
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
 
-@font-face {
+/* @font-face {
   font-family: bootstrapIcon;
   src: url(../fonts/bootstrap-icons.woff);
-}
+} */
 
 /*Josefin Sans*/
 
-@font-face {
+/* @font-face {
   font-family: "Josefin Sans Light";
   font-style: normal;
   font-weight: 300;
@@ -100,11 +100,11 @@
   font-style: italic;
   font-weight: 700;
   src: url("../fonts/JosefinSans-BoldItalic.ttf");
-}
+} */
 
 /* Lato */
 
-@font-face {
+/* @font-face {
   font-family: "Lato Light";
   font-style: normal;
   font-weight: 300;
@@ -152,4 +152,4 @@
   font-style: italic;
   font-weight: 900;
   src: url("../fonts/Lato-BlackItalic.ttf");
-}
+} */

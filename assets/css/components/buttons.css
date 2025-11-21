@@ -2,9 +2,9 @@
 
 @font-face {
   font-family: "Prelo Book";
-  src: url(../fonts/Prelo-Book.ttf) format("truetype");
+  src: url(../../../fonts/Prelo-Book.ttf) format("truetype");
   font-family: "Prelo Bold";
-  src: url(../fonts/Prelo-Bold.ttf) format("truetype");
+  src: url(../../../fonts/Prelo-Bold.ttf) format("truetype");
 }
 
 .row.botao {
@@ -52,7 +52,7 @@
 }
 
 #botaoAvancar {
-  background-color: #f77f00;
+  background-color: #05314A;
   /* border-radius: 25px; */
   color: white;
   width: 260px;
@@ -71,8 +71,8 @@
 #botaoVoltar {
   background-color: white;
   /* border-radius: 25px; */
-  border: 1px solid #f77f00;
-  color: #f77f00;
+  border: 1px solid #05314A;
+  color: #05314A;
   width: 260px;
   height: 40px;
   display: flex;
@@ -102,12 +102,12 @@
 
 .botaoAvaliacao {
   background-color: white;
-  color: #f77f00;
-  border: 1px solid #f77f00 !important;
+  color: #05314A;
+  border: 1px solid #05314A !important;
 }
 
 .botaoMatricula {
-  background-color: #f77f00;
+  background-color: #05314A;
   color: white;
 }
 
@@ -133,7 +133,7 @@
 #sidebarButton {
   position: fixed;
   color: white;
-  background-color: #f77f00;
+  background-color: #05314A;
   border-radius: 0 0 5px 0;
   padding: 0px !important;
   margin-left: 16.667%;
