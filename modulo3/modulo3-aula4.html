@@ -228,8 +228,19 @@
                 ></span
                 >Medidas de controle e prevenção das leishmanioses</a
               >
-
-
+              <a
+                href="modulo3-quiz.html"
+                tabindex="0"
+                role="link"
+                class="sidebar__btn sidebar__list-item"
+                ><span
+                  class="material-symbols-rounded"
+                  aria-label="Tópico não concluído"
+                  status=""
+                >
+                </span>
+                Quiz</a
+              >
             </div>
           </nav>
 
@@ -438,12 +449,9 @@
             </a>
           </div>
           <div class="div-video">
-            <iframe
-              src="https://educare.fiocruz.br/file-storage/mtOXFNRC"
-              controls
-              allowfullscreen
-              class="iframe-video"
-            ></iframe>
+            <video controls class="iframe-video" poster="../assets/images/icones/capaVideo.png">
+              <source src="https://educare.fiocruz.br/file-storage/mtOXFNRC" type="video/mp4" allowfullscreen="allowfullscreen">
+            </video>
           </div>
           <div id="margin-video" style="margin-bottom: 30px"></div>
           <p>
@@ -465,16 +473,12 @@
               align-items: center;
             "
           >
-            <p class="text-muted text-center">
+            <a class="button-video2" onclick="openVideo2()">
               <span
                 class="material-symbols-rounded"
                 style="transform: rotateX(180deg)"
                 >touch_app</span
-              >
-              Clique no botão abaixo para fechar a informação
-            </p>
-            <a class="button-video" onclick="openVideo2()">
-              Fechar vídeo e voltar ao conteúdo:
+              >&nbsp Fechar vídeo e voltar ao conteúdo
             </a>
           </div>
           <div class="div-video2">
